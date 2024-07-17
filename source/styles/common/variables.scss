@@ -1,0 +1,37 @@
+/* ---ПАЛИТРЫ ЦВЕТОВ--- */
+
+// МОНОХРОМНАЯ
+$color-black: #000000;
+$color-white: #ffffff;
+$color-transparent: rgba(0, 0, 0, 0);
+
+// ЦВЕТНАЯ
+$color-any: #ff0000;
+
+/* ---АНИМАЦИИ И ПЕРЕХОДЫ--- */
+$tr-default: 0.3s ease-in-out;
+$tr-fast: 0.1s ease-in-out;
+
+/* ---КОНТРЛЬНЫЕ ТОЧКИ И АДАПТИВНОСТЬ--- */
+
+// БРЕЙКПОИНТЫ
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-l: 1920px;
+$breakpoint-gap: 0.02px;
+
+// МЕДИА-ВЫРАЖЕНИЯ
+// ТЕЛЕФОНЫ
+$mobile-only: "screen and (max-width: #{$breakpoint-tablet - $breakpoint-gap})";
+// ПЛАНШЕТЫ
+$tablet-only: "screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+// КОМПЬЮТЕРЫ
+$desktop-only: "screen and (min-width: #{$breakpoint-desktop})";
+$large-desktop-only: "screen and (min-width: #{$breakpoint-desktop-l})";
+// ИСКЛЮЧЕНИЯ
+$not-mobile: "screen and (min-width: #{$breakpoint-tablet})";
+$not-desktop: "screen and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+
+// СОСТОЯНИЯ
+$hover: "(hover: hover)";

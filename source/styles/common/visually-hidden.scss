@@ -1,0 +1,21 @@
+.visually-hidden {
+  /* stylelint-disable declaration-no-important */
+  position: absolute !important;
+
+  display: block !important;
+  width: 1px !important;
+  height: 1px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  white-space: nowrap !important;
+
+  border: 0 !important;
+
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  /* stylelint-enable declaration-no-important */
+}

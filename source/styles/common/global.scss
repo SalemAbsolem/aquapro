@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $color-any; // заменить на цвет фона выделения текста
+  color: $color-any;      // заменить на цвет текста при выделении
+}
+
+@media #{$desktop-only} {
+  ::-webkit-scrollbar-thumb {
+    background: $color-any;    // заменить на цвет ползунка в скроллбаре
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+    background: $color-white;  // заменить на цвет фона в скроллбаре
+  }
+
+  html {
+    scrollbar-color: $color-any $color-white; // заменить на цвет ползунка и цвет фона в скроллбаре
+    scrollbar-width: thin;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar-thumb {
+      width: 0;
+      height: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-variant-numeric: lining-nums;
+}
+
+picture,
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
