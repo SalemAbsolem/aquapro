@@ -7,5 +7,30 @@
 @import "./common/animation.scss";
 @import "./common/wordpress.scss";
 
-/* BLOCKS */
+/* HEADER + BUTTON */
+@import "./blocks/page.scss";
+@import "./blocks/body.scss";
 @import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/social.scss";
+@import "./blocks/button.scss";
+
+/* BLOCKS */
+@import "./blocks/main.scss";
+@import "./blocks/hero-slider.scss";
+@import "./blocks/hero-slide.scss";
+@import "./blocks/advanteges.scss";
+@import "./blocks/services.scss";
+@import "./blocks/calculate.scss";
+@import "./blocks/about.scss";
+@import "./blocks/portfolio.scss";
+@import "./blocks/project.scss";
+
+/* FOOTER */
+@import "./blocks/consult.scss";
+@import "./blocks/form-consult.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/legal.scss";

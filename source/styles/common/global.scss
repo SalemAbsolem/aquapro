@@ -5,24 +5,24 @@
 }
 
 ::selection {
-  background: $color-any; // заменить на цвет фона выделения текста
-  color: $color-any;      // заменить на цвет текста при выделении
+  background: $color-blue;
+  color: $color-white;
 }
 
 @media #{$desktop-only} {
   ::-webkit-scrollbar-thumb {
-    background: $color-any;    // заменить на цвет ползунка в скроллбаре
+    background: $color-brown;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar {
     width: 5px;
     height: 0;
-    background: $color-white;  // заменить на цвет фона в скроллбаре
+    background: $color-white;
   }
 
   html {
-    scrollbar-color: $color-any $color-white; // заменить на цвет ползунка и цвет фона в скроллбаре
+    scrollbar-color: $color-brown $color-white;
     scrollbar-width: thin;
   }
 

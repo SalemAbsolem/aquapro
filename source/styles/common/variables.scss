@@ -1,12 +1,17 @@
 /* ---ПАЛИТРЫ ЦВЕТОВ--- */
 
 // МОНОХРОМНАЯ
-$color-black: #000000;
-$color-white: #ffffff;
+$color-black: #141414;
+$color-white: #f9fbfc;
 $color-transparent: rgba(0, 0, 0, 0);
 
+$color-gray: #bfbfbf;
+$color-dark-gray: #828282;
+
 // ЦВЕТНАЯ
-$color-any: #ff0000;
+$color-blue: #2e9cb4;
+$color-green: #88ab68;
+$color-brown: #b18b6c;
 
 /* ---АНИМАЦИИ И ПЕРЕХОДЫ--- */
 $tr-default: 0.3s ease-in-out;
@@ -18,7 +23,6 @@ $tr-fast: 0.1s ease-in-out;
 $breakpoint-mobile: 320px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1200px;
-$breakpoint-desktop-l: 1920px;
 $breakpoint-gap: 0.02px;
 
 // МЕДИА-ВЫРАЖЕНИЯ
@@ -28,7 +32,6 @@ $mobile-only: "screen and (max-width: #{$breakpoint-tablet - $breakpoint-gap})";
 $tablet-only: "screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
 // КОМПЬЮТЕРЫ
 $desktop-only: "screen and (min-width: #{$breakpoint-desktop})";
-$large-desktop-only: "screen and (min-width: #{$breakpoint-desktop-l})";
 // ИСКЛЮЧЕНИЯ
 $not-mobile: "screen and (min-width: #{$breakpoint-tablet})";
 $not-desktop: "screen and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";

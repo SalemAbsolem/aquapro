@@ -1,8 +1,10 @@
-/*
-Подключение шрифтов
-
 $primary-font: "Involve", "Arial", sans-serif;
-$secondary-font: "Pines", "Arial", sans-serif;
+$secondary-font: "Inter", "Arial", sans-serif;
 
+@include font-face("Involve", 400, normal, url("../../fonts/involve/involve-regular.woff2") format("woff2"), url("../../fonts/involve/involve-regular.woff") format("woff"));
 @include font-face("Involve", 500, normal, url("../../fonts/involve/involve-medium.woff2") format("woff2"), url("../../fonts/involve/involve-medium.woff") format("woff"));
-*/
+@include font-face("Involve", 600, normal, url("../../fonts/involve/involve-semibold.woff2") format("woff2"), url("../../fonts/involve/involve-semibold.woff") format("woff"));
+@include font-face("Involve", 700, normal, url("../../fonts/involve/involve-bold.woff2") format("woff2"), url("../../fonts/involve/involve-bold.woff") format("woff"));
+@include font-face("Inter", 400, normal, url("../../fonts/inter/inter-regular.woff2") format("woff2"), url("../../fonts/inter/inter-regular.woff") format("woff"));
+@include font-face("Inter", 500, normal, url("../../fonts/inter/inter-medium.woff2") format("woff2"), url("../../fonts/inter/inter-medium.woff") format("woff"));
+@include font-face("Inter", 700, normal, url("../../fonts/inter/inter-bold.woff2") format("woff2"), url("../../fonts/inter/inter-bold.woff") format("woff"));
