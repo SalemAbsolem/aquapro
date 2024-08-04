@@ -141,7 +141,7 @@
 
     transform: translate(-50%, -50%) rotate(-45deg);
 
-    transition: width $tr-default 0.4s, height $tr-default, border-width $tr-default;
+    transition: width $tr-default 0.4s, height $tr-default, border-width $tr-default 0.4s;
   }
 }
 

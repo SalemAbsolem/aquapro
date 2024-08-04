@@ -52,7 +52,8 @@
   </head>
   <body class="page__body body">
     <div class="body__container">
-      <header class="body__header header header--menu-open">
+      <!-- чтобы открыть меню класс-модификатор menu-open -->
+      <header class="body__header header">
         <!-- если главная, то атрибут aria-current и класс  -->
         <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
           <!-- если главная, то атрибут aria-hidden -->
@@ -63,7 +64,7 @@
             <img class="logo__image" src="images/logotype.svg" width="113" height="15" alt="Логотип АКВАПРО">
           </div>
         </a>
-        <!-- чтобы открыть меню класс-модификатор open -->
+
         <div class="header__menu menu">
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
@@ -159,12 +160,12 @@
           </a>
         </div>
         <div class="header__button-wrap">
-          <a class="header__button button button--price" href="#"  style="display: none;">
+          <a class="header__button-price button button--price" href="#"  style="display: none;">
             <span class="button__text">
               Узнать стоимость
             </span>
           </a>
-          <a class="menu__button button button--phone" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow"  style="display: none;">
+          <a class="header__button-phone button button--phone" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow"  style="display: none;">
             <span class="button__text visually-hidden">
               Позвонить
             </span>
@@ -175,7 +176,7 @@
             </div>
           </a>
           <!-- когда открыто меню добавляется класс-модификатор close -->
-          <button class="menu__button button button--menu" type="button">
+          <button class="header__button-menu button button--menu" type="button">
             <span class="button__text">
               Меню
             </span>

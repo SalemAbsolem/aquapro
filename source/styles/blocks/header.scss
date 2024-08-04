@@ -28,30 +28,26 @@
       visibility: visible;
     }
 
-    .menu__button {
+    .header__button-menu {
       font-size: 0;
 
       background-color: $color-blue;
       border-color: $color-blue;
     }
 
-    .menu__button::after,
-    .menu__button::before {
+    .header__button-menu::after,
+    .header__button-menu::before {
       width: 14px;
       height: 2px;
     }
 
-    .menu__button::after {
+    .header__button-menu::after {
       transform: translate(-50%, -50%) rotate(135deg);
     }
 
-    .menu__button::before {
+    .header__button-menu::before {
       transform: translate(-50%, -50%) rotate(-135deg);
     }
-
-    // .menu__button .button__text {
-
-    // }
   }
 }
 
