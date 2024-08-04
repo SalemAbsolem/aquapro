@@ -2,40 +2,195 @@
 
 // }
 
-// .form-consult__wrap-input {
+.form-consult__wrap-input {
+  position: relative;
 
-// }
+  margin: 0 0 10px;
+}
 
-// .form-consult__label {
+.form-consult__label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
 
-// }
+  font-family: $secondary-font;
+  font-size: 12px;
+  font-weight: 400;
 
-// .form-consult__imput {
-//   &.form-consult__imput--name {
+  opacity: 0.5;
 
-//   }
+  transform: translateY(-50%);
+  transform-origin: left;
 
-//   &.form-consult__imput--phone {
+  transition: transform $tr-default, opacity $tr-default;
 
-//   }
+  &.form-consult__label--privacy {
+    position: static;
+    transform: none;
+  }
+}
 
-//   &.form-consult__imput--email {
+.form-consult__imput {
+  width: 100%;
+  padding: 14px 12px 10px;
 
-//   }
+  font-family: $secondary-font;
+  font-size: 12px;
+  font-weight: 400;
 
-//   &.form-consult__imput--privacy {
+  background-color: $color-light-gray;
+  border: 2px solid $color-transparent;
+  border-radius: 12px;
 
-//   }
-// }
+  transition: background-color $tr-default, border-color $tr-default;
 
-// .form-consult__error-text {
+  &:focus {
+    outline: none;
+  }
 
-// }
+  &.form-consult__imput--error,
+  &.form-consult__imput--error + .form-consult__checkbox-icon {
+    border: 2px solid $color-red;
+  }
 
-// .form-consult__checkbox-link {
+  @media #{$hover} {
+    &:hover {
+      background-color: rgba($color-gray, 0.6);
+    }
+  }
 
-// }
+  &:not(.form-consult__imput--privacy):focus + .form-consult__label:not(.form-consult__label--privacy),
+  &:not(.form-consult__imput--privacy):valid + .form-consult__label:not(.form-consult__label--privacy),
+  &:not(.form-consult__imput--privacy):not(:placeholder-shown) + .form-consult__label:not(.form-consult__label--privacy) {
+    transform: translateY(-120%) scale(0.7);
+  }
 
-// .form-consult__button {
+  // &.form-consult__imput--name {
 
-// }
+  // }
+
+  // &.form-consult__imput--phone {
+
+  // }
+
+  // &.form-consult__imput--email {
+
+  // }
+
+  @media #{$hover} {
+    &.form-consult__imput--privacy:hover + .form-consult__checkbox-icon {
+      background-color: rgba($color-gray, 0.6);
+    }
+
+    &.form-consult__imput--privacy:hover ~ .form-consult__label.form-consult__label--privacy {
+      opacity: 1;
+    }
+  }
+
+  &.form-consult__imput--privacy:active + .form-consult__checkbox-icon {
+    background-color: rgba($color-gray, 0.6);
+
+    transition: background-color $tr-fast;
+  }
+
+  &.form-consult__imput--privacy:active ~ .form-consult__label.form-consult__label--privacy {
+    opacity: 1;
+
+    transition: opacity $tr-fast;
+  }
+
+  &.form-consult__imput--privacy:checked + .form-consult__checkbox-icon::after {
+    width: 10px;
+    height: 5px;
+
+    border-width: 0 0 2px 2px;
+
+    transition: width $tr-default, height $tr-default 0.4s, border-width $tr-default;
+  }
+}
+
+.form-consult__checkbox-icon {
+  position: relative;
+
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+
+  vertical-align: middle;
+
+  background-color: $color-light-gray;
+  // border: 2px solid $color-gray;
+  border-radius: 5px;
+
+  transition: background-color $tr-default;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-bottom: 0 solid $color-dark-gray;
+    border-left: 0 solid $color-dark-gray;
+    border-top: 0 solid $color-transparent;
+    border-right: 0 solid $color-transparent;
+
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    transition: width $tr-default 0.4s, height $tr-default, border-width $tr-default;
+  }
+}
+
+.form-consult__error-text {
+  position: absolute;
+  top: 80%;
+  left: 10px;
+  z-index: 10;
+
+  display: inline-block;
+  max-width: 280px;
+  padding: 5px;
+
+  font-size: 10px;
+  color: $color-white;
+
+  background-color: $color-red;
+  border-radius: 5px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.form-consult__checkbox-link {
+  font-family: $secondary-font;
+  font-size: 12px;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: 1px solid underline;
+  text-decoration-skip-ink: none;
+
+  opacity: 0.5;
+
+  transition: opacity $tr-default;
+
+  @media #{$hover} {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+
+    transition: opacity $tr-fast;
+  }
+}
+
+.form-consult__button {
+  margin-top: 20px;
+}

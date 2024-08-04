@@ -52,7 +52,7 @@
   </head>
   <body class="page__body body">
     <div class="body__container">
-      <header class="body__header header">
+      <header class="body__header header header--menu-open">
         <!-- если главная, то атрибут aria-current и класс  -->
         <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
           <!-- если главная, то атрибут aria-hidden -->
@@ -64,7 +64,7 @@
           </div>
         </a>
         <!-- чтобы открыть меню класс-модификатор open -->
-        <div class="header__menu menu" style="display: none;">
+        <div class="header__menu menu">
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -120,43 +120,31 @@
           <div class="menu__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/telegram@2x.png');" data-hover-color="#2e9cb4">
                   <span class="visually-hidden">
                     Телеграм
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/telegram.svg" width="30" height="30" alt="Телеграм">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/vk@2x.png');" data-hover-color="#2e9cb4">
                   <span class="visually-hidden">
                     Вконтакте
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/vk.svg" width="30" height="30" alt="Вконтакте">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/wa@2x.png');" data-hover-color="#88ab68">
                   <span class="visually-hidden">
                     WhatsApp
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/wa.svg" width="30" height="30" alt="WhatsApp">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/instagram@2x.png');" data-hover-color="#cf417d">
                   <span class="visually-hidden">
                     Instagram
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/instagram.svg" width="30" height="30" alt="Instagram">
-                  </div>
                 </a>
               </li>
             </ul>
@@ -164,7 +152,7 @@
               *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена
             </p>
           </div>
-          <a class="menu__button button button--with-arrow button--price" href="#">
+          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="#">
             <span class="button__text">
               Узнать стоимость бассейна
             </span>
@@ -211,7 +199,7 @@
                 <p class="hero-slide__description">
                   Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
                 </p>
-                <a class="hero-slide__button button button--with-arrow button--price" href="#">
+                <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
                   <span class="button__text">
                     Узнать стоимость бассейна
                   </span>
@@ -284,6 +272,8 @@
               <p class="advanteges__description">
                 Делаем свою работу качественно. Наши бассейны прослужат больше 30 лет.
               </p>
+              <span class="advanteges__decoration advanteges__decoration--top"></span>
+              <span class="advanteges__decoration advanteges__decoration--left"></span>
             </li>
             <li class="advanteges__item">
               <h3 class="advanteges__title">
@@ -292,6 +282,8 @@
               <p class="advanteges__description">
                 Гарантируем  бесплатное сервисное обслуживание от 1 года
               </p>
+              <span class="advanteges__decoration advanteges__decoration--top"></span>
+              <span class="advanteges__decoration advanteges__decoration--left"></span>
             </li>
             <li class="advanteges__item">
               <h3 class="advanteges__title">
@@ -300,6 +292,8 @@
               <p class="advanteges__description">
                 Создали уникальную технологию установки бассейнов, которая позволяет сократить срок работы до 20%
               </p>
+              <span class="advanteges__decoration advanteges__decoration--top"></span>
+              <span class="advanteges__decoration advanteges__decoration--left"></span>
             </li>
             <li class="advanteges__item">
               <h3 class="advanteges__title">
@@ -308,6 +302,8 @@
               <p class="advanteges__description">
                 Предлагаем индивидуальные дизайнерские решения для каждого клиента
               </p>
+              <span class="advanteges__decoration advanteges__decoration--top"></span>
+              <span class="advanteges__decoration advanteges__decoration--left"></span>
             </li>
           </ol>
         </section>
@@ -333,6 +329,8 @@
                   Подробнее
                 </span>
               </a>
+              <span class="services__decoration services__decoration--top"></span>
+              <span class="services__decoration services__decoration--left"></span>
               <div class="services__background-wrap">
                 <img class="services__background-image" src="images/service-1@2x.png" width="4032" height="3024" alt="#">
               </div>
@@ -349,11 +347,13 @@
               <p class="services__description">
                 Проводим диагностику технического состояния бассейна и устраняем неполадки.
               </p>
-              <a class="services__button button button--more" href="#">
+              <a class="services__button button button--more button--blue-text" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
+              <span class="services__decoration services__decoration--top"></span>
+              <span class="services__decoration services__decoration--left"></span>
               <div class="services__background-wrap">
                 <img class="services__background-image" src="images/service-2@2x.png" width="4032" height="3024" alt="#">
               </div>
@@ -361,10 +361,10 @@
           </ul>
         </section>
         <section  class="main__section calculate">
-          <h2 class="main__section-title">
+          <h2 class="main__section-title main__section-title--white">
             Рассчитаем смету за 1 час и предложим наиболее выгодный вариант под Ваш запрос.
           </h2>
-          <a class="calculate__button button button--with-arrow button--price" href="#">
+          <a class="calculate__button button button--with-arrow button--price button--calculate" href="#">
             <span class="button__text">
               Рассчитать стоимость
             </span>
@@ -386,14 +386,19 @@
           <p class="about__description about__description--with-background">
             Мы соблюдаем все необходимые стандарты фильтрации, поэтому Вы сможете наслаждаться плаванием в бассейне с кристально чистой водой
           </p>
-          <div class="about__image-wrap">
-            <img class="about__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
+
+            <div class="about__image-wrap">
+              <img class="about__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
+            </div>
+          <div class="about__button-container">
+            <a class="about__button button button--more button--blue-text" href="#">
+              <span class="button__text">
+                Подробнее
+              </span>
+            </a>
+            <span class="about__decoration about__decoration--top"></span>
+            <span class="about__decoration about__decoration--left"></span>
           </div>
-          <a class="about__button button button--more" href="#">
-            <span class="button__text">
-              Подробнее
-            </span>
-          </a>
         </section>
         <section  class="main__section portfolio">
           <div class="portfolio__header">
@@ -401,12 +406,12 @@
               Наше портфолио
             </h2>
             <div class="portfolio__button-wrap">
-              <button class="portfolio__button button button--tab" type="button">
+              <button class="portfolio__button button button--tab button--brown button--tab-active" type="button">
                 <span class="button__text">
                   Строительство
                 </span>
               </button>
-              <button class="portfolio__button button button--tab" type="button">
+              <button class="portfolio__button button button--tab button--blue" type="button">
                 <span class="button__text">
                   Обслуживание
                 </span>
@@ -415,318 +420,286 @@
           </div>
           <ul class="portfolio__list">
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
           </ul>
           <ul class="portfolio__list" style="display: none;">
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
             <li class="portfolio__item project">
+              <h3 class="project__title">
+                Название проекта
+              </h3>
+              <p class="project__description">
+                Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
+              </p>
               <ul class="project__slider">
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
                 <li class="project__slide">
-                  <h3 class="project__title">
-                    Название проекта
-                  </h3>
-                  <p class="project__description">
-                    Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                  </p>
                   <div class="project__image-wrap">
                     <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
                   </div>
                 </li>
               </ul>
-              <div class="project__slide-button button button--slide-portfolio button--slide-prev"></div>
-              <div class="project__slide-button button button--slide-portfolio button--slide-next"></div>
+              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
+                <span class="button__text visually-hidden">
+                  Предыдущее изображение.
+                </span>
+              </button>
+              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
+                <span class="button__text visually-hidden">
+                  Следующее изображение.
+                </span>
+              </button>
             </li>
           </ul>
           <button class="portfolio__show-more-button button button--show-more" type="button">
@@ -735,7 +708,7 @@
             </span>
           </button>
         </section>
-        <section class="main__section consult">
+        <section class="main__section main__section--consult consult">
           <h2 class="main__section-title">
             Получить консультацию
           </h2>
@@ -744,33 +717,34 @@
           </p>
           <form class="consult__form form-consult" action="#" method="post">
             <p class="form-consult__wrap-input">
+              <input class="form-consult__imput form-consult__imput--name form-consult__imput--error" type="text" name="name" id="name" placeholder=" " required>
               <label class="form-consult__label" for="name">
                 Имя
               </label>
-              <input class="form-consult__imput form-consult__imput--name" type="text" name="name" id="name" placeholder=" " required>
               <span class="form-consult__error-text">
                 Заполните, пожалуйста, имя
               </span>
             </p>
             <p class="form-consult__wrap-input">
+              <input class="form-consult__imput form-consult__imput--phone" type="text" name="phone" id="phone" placeholder=" " required>
               <label class="form-consult__label" for="phone">
                 Телефон
               </label>
-              <input class="form-consult__imput form-consult__imput--phone" type="text" name="phone" id="phone" placeholder=" " required>
               <span class="form-consult__error-text"></span>
             </p>
             <p class="form-consult__wrap-input">
+              <input class="form-consult__imput form-consult__imput--email" type="text" name="email" id="email" placeholder=" " required>
               <label class="form-consult__label" for="email">
                 Почта
               </label>
-              <input class="form-consult__imput form-consult__imput--email" type="text" name="email" id="email" placeholder=" " required>
               <span class="form-consult__error-text"></span>
             </p>
             <p class="form-consult__wrap-input">
-              <input class="form-consult__imput form-consult__imput--privacy" type="checkbox" name="privacy" id="privacy" required>
-              <label class="form-consult__label" for="privacy">Согласен(а) на&ensp;</label><a class="form-consult__checkbox-link" href="#">обработку персональных данных</a>
+              <input class="form-consult__imput form-consult__imput--privacy visually-hidden" type="checkbox" name="privacy" id="privacy" required>
+              <span  class="form-consult__checkbox-icon"></span>
+              <label class="form-consult__label form-consult__label--privacy" for="privacy">Даю согласие на&ensp;</label><a class="form-consult__checkbox-link" href="#">обработку персональных данных</a>
             </p>
-            <button class="form-consult__button button button--submit" type="submit">
+            <button class="form-consult__button button button--submit button--blue-text" type="submit">
               <span class="button__text">
                 Отправить
               </span>
@@ -780,7 +754,7 @@
       </main>
       <footer class="body__footer footer">
         <div class="footer__wrap">
-          <div class="header__logo logo logo--footer ">
+          <div class="footer__logo logo logo--footer ">
             <div class="logo__image-wrap">
               <picture>
                 <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-footer-tablet-desktop.svg" width="251" height="90">
@@ -791,7 +765,7 @@
               все права защищены
             </p>
           </div>
-          <div class="footer__group footer__group--navigation">
+          <div class="footer__group footer__group--navigation navigation navigation--footer">
             <h2 class="footer__group-title">
               Навигация
             </h2>
@@ -851,7 +825,7 @@
               </li>
             </ul>
           </div>
-          <a class="footer__button button button--price" href="#">
+          <a class="footer__button button button--price button--footer-price button--blue-text" href="#">
             <span class="button__text">
               Рассчитать стоимость
             </span>
@@ -880,43 +854,31 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/telegram@2x.png');" data-hover-color="#2e9cb4">
                   <span class="visually-hidden">
                     Телеграм
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/telegram.svg" width="30" height="30" alt="Телеграм">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/vk@2x.png');" data-hover-color="#2e9cb4">
                   <span class="visually-hidden">
                     Вконтакте
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/vk.svg" width="30" height="30" alt="Вконтакте">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/wa@2x.png');" data-hover-color="#88ab68">
                   <span class="visually-hidden">
                     WhatsApp
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/wa.svg" width="30" height="30" alt="WhatsApp">
-                  </div>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/instagram@2x.png');" data-hover-color="#cf417d">
                   <span class="visually-hidden">
                     Instagram
                   </span>
-                  <div class="social__icon-wrap">
-                    <img class="social__icon" src="images/instagram.svg" width="30" height="30" alt="Instagram">
-                  </div>
                 </a>
               </li>
             </ul>
@@ -926,7 +888,7 @@
           </div>
           <p class="footer__group footer__group-developer">
             <span class="footer__group-subtitle">
-              Сайт разработан
+              Сайт разработан:
             </span>
             <a class="footer__group-link footer__group-link--developer" href="#" rel="nofollow noreferrer noopener" target="_blank">
               <span class="visually-hidden">

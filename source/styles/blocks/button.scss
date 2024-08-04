@@ -1,56 +1,440 @@
-// .button {
-//   &.button--with-arrow {
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 
-//   }
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 
-//   &.button--price {
+  background-color: unset;
+  border: unset;
 
-//   }
+  cursor: pointer;
 
-//   &.button--phone {
+  &.button--on-hero-slide {
+    width: 300px;
+    height: 51px;
+    padding: 0 51px 0 0;
 
-//   }
+    border-radius: 12px;
 
-//   &.button--menu {
+    transition: background-color $tr-default, color $tr-default;
 
-//   }
+    &::after {
+      width: 51px;
+      height: 51px;
 
-//   &.button--more {
+      background-position: center right 20px;
+      background-size: 8px 15px;
 
-//   }
+      transition: width $tr-default;
+    }
 
-//   &.button--brown-text {
+    @media #{$hover} {
+      &:hover {
+        color: $color-blue;
 
-//   }
+        &::after {
+          width: 300px;
+        }
+      }
+    }
 
-//   &.button--tab {
+    &:active {
+      color: $color-blue;
 
-//   }
+      background-color: $color-white;
 
-//   &.button--slide-portfolio {
+      transition: background-color $tr-fast, color $tr-fast;
 
-//   }
+      &::after {
+        width: 300px;
 
-//   &.button--slide-prev {
+        transition: width $tr-fast;
+      }
+    }
+  }
 
-//   }
+  &.button--with-arrow {
+    position: relative;
 
-//   &.button--slide-next {
+    color: $color-white;
 
-//   }
+    background-color: $color-blue;
 
-//   &.button--show-more {
+    overflow: hidden;
 
-//   }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
 
-//   &.button--submit {
+      background-image: url("../../icons/arrow.svg");
+      background-color: $color-white;
+      background-repeat: no-repeat;
 
-//   }
-// }
+      border-radius: 12px;
+    }
+  }
 
-// .button__text {
+  // &.button--price {
 
-// }
+  // }
+
+  // &.button--phone {
+
+  // }
+
+  &.button--menu {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 3px 11px;
+
+    font-weight: 600;
+    color: $color-blue;
+
+    background-color: $color-white;
+
+    border: 2px solid $color-gray;
+    border-radius: 8px;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default, font-size $tr-default;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 0;
+      height: 0;
+
+      background-color: $color-white;
+      border-radius: 10px;
+
+      transform: translate(-50%, -50%) rotate(0);
+
+      transition: width $tr-default, height $tr-default, transform $tr-default;
+    }
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white-menu;
+
+        background-color: $color-blue;
+
+        border-color: $color-blue;
+      }
+    }
+
+    &:active {
+      color: $color-white-menu;
+
+      background-color: $color-blue;
+
+      border-color: $color-blue;
+
+      transition: background-color $tr-fast, border-color $tr-fast, color $tr-fast;
+    }
+  }
+
+  &.button--menu-price {
+    width: 300px;
+    height: 51px;
+    min-height: 51px;
+    padding: 0 51px 0 0;
+
+    border-radius: 12px;
+
+    overflow: visible;
+
+    transition: background-color $tr-default, color $tr-default;
+
+    &::after {
+      width: 51px;
+      height: 51px;
+
+      background-position: center right 20px;
+      background-size: 8px 15px;
+
+      border-radius: 12px 0 0 12px;
+
+      transition: width $tr-default;
+    }
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-blue;
+
+        background-color: $color-white;
+
+        transition: background-color $tr-default 0.4s, color $tr-default;
+
+        &::after {
+          width: 300px;
+        }
+      }
+    }
+
+    &:active {
+      color: $color-blue;
+
+      background-color: $color-white;
+
+      transition: background-color $tr-fast, color $tr-fast;
+
+      &::after {
+        width: 300px;
+
+        transition: width $tr-fast;
+      }
+    }
+  }
+
+  &.button--more {
+    padding: 8px 16px;
+
+    background-color: $color-white;
+    border: 2px solid $color-gray;
+    border-radius: 12px;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+  }
+
+  &.button--brown-text {
+    color: $color-brown;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white-menu;
+
+        background-color: $color-brown;
+
+        border-color: $color-brown;
+      }
+    }
+
+    &:active {
+      color: $color-white-menu;
+
+      background-color: $color-brown;
+
+      border-color: $color-brown;
+
+      transition: background-color $tr-fast, border-color $tr-fast, color $tr-fast;
+    }
+  }
+
+  &.button--blue-text {
+    color: $color-blue;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white-menu;
+
+        background-color: $color-blue;
+
+        border-color: $color-blue;
+      }
+    }
+
+    &:active {
+      color: $color-white-menu;
+
+      background-color: $color-blue;
+
+      border-color: $color-blue;
+
+      transition: background-color $tr-fast, border-color $tr-fast, color $tr-fast;
+    }
+  }
+
+  &.button--calculate {
+    width: 250px;
+    height: 37px;
+    padding: 0 37px 0 0;
+
+    border-radius: 12px;
+
+    transition: background-color $tr-default, color $tr-default;
+
+    &::after {
+      width: 37px;
+      height: 37px;
+
+      background-position: center right 15px;
+      background-size: 6px 11px;
+
+      transition: width $tr-default;
+    }
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-blue;
+
+        &::after {
+          width: 250px;
+        }
+      }
+    }
+
+    &:active {
+      color: $color-blue;
+
+      background-color: $color-white;
+
+      transition: background-color $tr-fast, color $tr-fast;
+
+      &::after {
+        width: 300px;
+
+        transition: width $tr-fast;
+      }
+    }
+  }
+
+  &.button--tab {
+    width: 100%;
+    padding: 8px 10px;
+
+    font-weight: 500;
+    color: rgba($color-black, 0.5);
+
+    background-color: $color-light-gray;
+    border-radius: 12px;
+
+    transition: background-color $tr-default, color $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white;
+
+        background-color: $color-dark-gray;
+      }
+    }
+
+    &:active {
+      color: $color-white;
+
+      background-color: $color-dark-gray;
+
+      transition: background-color $tr-fast, color $tr-fast;
+    }
+  }
+
+  &.button--brown.button--tab-active {
+    color: $color-white;
+
+    background-color: $color-brown;
+
+    pointer-events: none;
+  }
+
+  &.button--blue.button--tab-active {
+    color: $color-white;
+
+    background-color: $color-blue;
+
+    pointer-events: none;
+  }
+
+  &.button--slide-portfolio {
+    width: 25px;
+
+    mask-image: url("../../icons/arrow.svg");
+    mask-size: 5px 10px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: $color-dark-gray;
+
+    transition: background-color $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        background-color: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-white;
+
+      transition: background-color $tr-fast;
+    }
+  }
+
+  &.button--slide-prev {
+    transform: scale(-1);
+  }
+
+  // &.button--slide-next {
+
+  // }
+
+  &.button--show-more {
+    width: 100%;
+
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: 1px solid underline;
+    text-decoration-skip-ink: none;
+
+    opacity: 0.5;
+
+    transition: opacity $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      opacity: 1;
+
+      transition: opacity $tr-fast;
+    }
+  }
+
+  &.button--submit {
+    padding: 8px 16px;
+
+    font-weight: 500;
+
+    background-color: $color-white;
+    border: 2px solid $color-gray;
+    border-radius: 12px;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+  }
+
+  &.button--footer-price {
+    width: 100%;
+    padding: 8px 16px;
+
+    font-weight: 500;
+
+    background-color: $color-white;
+    border: 2px solid $color-gray;
+    border-radius: 12px;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+  }
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
 
 // .button__icon-wrap {
 

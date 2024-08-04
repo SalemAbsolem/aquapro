@@ -2,25 +2,37 @@
 
 // }
 
-// .portfolio__header {
+.portfolio__header {
+  margin-bottom: 12px;
+}
 
-// }
-
-// .portfolio__button-wrap {
-
-// }
+.portfolio__button-wrap {
+  display: flex;
+  gap: 10px;
+}
 
 // .portfolio__button {
 
 // }
 
-// .portfolio__list {
+.portfolio__list {
+  @include normalize-list;
 
-// }
+  margin: 0 0 12px;
+}
 
-// .portfolio__item {
+.portfolio__item {
+  max-height: 200px;
+  height: 200px;
 
-// }
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+}
 
 // .portfolio__show-more-button {
 

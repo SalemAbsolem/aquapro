@@ -2,26 +2,40 @@
 
 // }
 
-// .social__list {
+.social__list {
+  @include normalize-list;
 
-// }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+}
 
 // .social__item {
 
 // }
 
-// .social__link {
+.social__link {
+  display: block;
+  width: 28px;
+  height: 28px;
 
-// }
+  background-color: $color-black;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center center;
 
-// .social__icon-wrap {
+  transition: background-color $tr-default, opacity $tr-default;
 
-// }
+  &:active {
+    opacity: 0.5;
 
-// .social__icon {
+    transition: background-color $tr-fast, opacity $tr-fast;
+  }
+}
 
-// }
+.social__notification {
+  font-size: 12px;
 
-// .social__notification {
-
-// }
+  opacity: 0.5;
+}

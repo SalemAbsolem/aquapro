@@ -1,16 +1,43 @@
-// .legal {
+.legal {
+  @include normalize-list;
 
-// }
+  margin: 0;
+}
 
-// .legal__item {
+.legal__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 
-// }
+.legal__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-black;
 
-// .legal__link {
-//   &.legal__link--current {
+  transition: color $tr-default;
 
-//   }
-// }
+  &.legal__link--current {
+    color: $color-blue;
+    -webkit-text-stroke: 0.5px;
+
+    pointer-events: none;
+  }
+
+  @media #{$hover} {
+    &:hover {
+      color: $color-blue;
+      -webkit-text-stroke: 0.5px;
+    }
+  }
+
+  &:active {
+    color: $color-blue;
+    -webkit-text-stroke: 0.5px;
+
+    transition: color $tr-fast;
+  }
+}
 
 // .legal__link-text {
 

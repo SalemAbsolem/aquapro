@@ -1,54 +1,110 @@
-// .footer {
+.footer {
+  max-width: 300px;
+  width: 300px;
+  margin: 0 auto 40px;
+  padding: 20px 10px;
 
-// }
+  background-color: $color-light-gray;
+  border-radius: 18px;
 
-// .footer__wrap {
+  overflow: hidden;
+}
 
-// }
+.footer__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 22px;
 
-// .footer__group {
-//   &.footer__group--navigation {
+  max-width: 100%;
+}
 
-//   }
+.footer__logo {
+  grid-row: span 2;
+}
 
-//   &.footer__group--contacts {
+.footer__group {
+  &.footer__group--navigation {
+    margin-bottom: 20px;
+  }
 
-//   }
+  // &.footer__group--contacts {
 
-//   &.footer__group--legal {
+  // }
 
-//   }
-// }
+  &.footer__group--legal {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+  }
+}
 
-// .footer__group-title {
+.footer__group-title {
+  margin: 0 0 10px;
 
-// }
+  font-weight: 500;
+  font-size: 12px;
 
-// .footer__group-contacts {
+  opacity: 0.5;
+}
 
-// }
+.footer__group-contacts {
+  margin: 0;
+}
 
-// .footer__button {
+.footer__button {
+  grid-column: 1 / -1;
+  margin: 20px 0 30px;
+}
 
-// }
-
-// .footer__social {
-
-// }
+.footer__social {
+  grid-column: 1 / -1;
+}
 
 // .footer__group-developer {
 
 // }
 
-// .footer__group-subtitle {
+.footer__group-subtitle {
+  font-size: 12px;
 
-// }
+  opacity: 0.6;
+}
 
-// .footer__group-link {
-//   &.footer__group-link--developer {
+.footer__group-link {
+  &.footer__group-link--developer {
+    position: relative;
 
-//   }
-// }
+    display: inline-flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 3px;
+
+      display: block;
+      height: 1px;
+
+      background-color: $color-black;
+
+      opacity: 0;
+
+      transition: bottom $tr-default, opacity $tr-default;
+    }
+
+    @media #{$hover} {
+      &:hover::after {
+        bottom: 0;
+
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+
+      transition: bottom $tr-fast, opacity $tr-fast;
+    }
+  }
+}
 
 // .footer__icon-wrap {
 

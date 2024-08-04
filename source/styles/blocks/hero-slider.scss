@@ -1,14 +1,23 @@
-// .hero-slider {
+.hero-slider {
+  max-height: 525px;
+  height: 525px;
 
-// }
+  overflow: hidden;
+
+  border-radius: 0 0 18px 18px;
+}
 
 // .hero-slider__content {
 
 // }
 
-// .hero-slider__list {
+.hero-slider__list {
+  @include normalize-list;
 
-// }
+  display: flex;
+  max-width: 100%;
+  margin: 0;
+}
 
 // .hero-slider__item {
 

@@ -1,11 +1,32 @@
-// .contacts {
+.contacts {
+  @include normalize-list;
+}
 
-// }
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
 
-// .contacts__item {
+.contacts__link {
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-black;
+  hyphens: auto;
 
-// }
+  transition: color $tr-default;
 
-// .contacts__link {
+  @media #{$hover} {
+    &:hover {
+      color: $color-blue;
+      -webkit-text-stroke: 0.5px;
+    }
+  }
 
-// }
+  &:active {
+    color: $color-blue;
+    -webkit-text-stroke: 0.5px;
+
+    transition: color $tr-fast;
+  }
+}

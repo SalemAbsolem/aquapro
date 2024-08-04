@@ -3,8 +3,10 @@
 // МОНОХРОМНАЯ
 $color-black: #141414;
 $color-white: #f9fbfc;
+$color-white-menu: #ffffff;
 $color-transparent: rgba(0, 0, 0, 0);
 
+$color-light-gray: #e6e6e6;
 $color-gray: #bfbfbf;
 $color-dark-gray: #828282;
 
@@ -12,9 +14,10 @@ $color-dark-gray: #828282;
 $color-blue: #2e9cb4;
 $color-green: #88ab68;
 $color-brown: #b18b6c;
+$color-red: #cf417d;
 
 /* ---АНИМАЦИИ И ПЕРЕХОДЫ--- */
-$tr-default: 0.3s ease-in-out;
+$tr-default: 0.4s ease-in-out;
 $tr-fast: 0.1s ease-in-out;
 
 /* ---КОНТРЛЬНЫЕ ТОЧКИ И АДАПТИВНОСТЬ--- */

@@ -1,18 +1,29 @@
-// .menu {
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 68px 10px 10px;
 
-// }
+  background-color: $color-white;
+  opacity: 0;
+  visibility: hidden;
 
-// .menu__navigation {
+  overflow-y: auto;
 
-// }
+  transition: opacity $tr-default, visibility $tr-default;
+}
 
-// .menu__contacts {
+.menu__navigation {
+  margin: 0 0 48px;
+}
 
-// }
+.menu__contacts {
+  margin: 0 0 48px;
+}
 
-// .menu__social {
-
-// }
+.menu__social {
+  margin: 0 0 24px;
+}
 
 // .menu__button {
 
