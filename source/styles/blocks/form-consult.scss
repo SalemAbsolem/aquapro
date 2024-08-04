@@ -49,8 +49,12 @@
   }
 
   &.form-consult__imput--error,
-  &.form-consult__imput--error + .form-consult__checkbox-icon {
+  &.form-consult__imput--error + .form-consult__label.form-consult__label--privacy .form-consult__checkbox-icon {
     border: 2px solid $color-red;
+  }
+
+  &.form-consult__imput--error + .form-consult__label.form-consult__label--privacy {
+    opacity: 1;
   }
 
   @media #{$hover} {
@@ -78,7 +82,7 @@
   // }
 
   @media #{$hover} {
-    &.form-consult__imput--privacy:hover + .form-consult__checkbox-icon {
+    &.form-consult__imput--privacy:hover + .form-consult__label.form-consult__label--privacy .form-consult__checkbox-icon {
       background-color: rgba($color-gray, 0.6);
     }
 
@@ -87,7 +91,7 @@
     }
   }
 
-  &.form-consult__imput--privacy:active + .form-consult__checkbox-icon {
+  &.form-consult__imput--privacy:active + .form-consult__label.form-consult__label--privacy .form-consult__checkbox-icon {
     background-color: rgba($color-gray, 0.6);
 
     transition: background-color $tr-fast;
@@ -99,7 +103,7 @@
     transition: opacity $tr-fast;
   }
 
-  &.form-consult__imput--privacy:checked + .form-consult__checkbox-icon::after {
+  &.form-consult__imput--privacy:checked + .form-consult__label.form-consult__label--privacy .form-consult__checkbox-icon::after {
     width: 10px;
     height: 5px;
 
@@ -113,8 +117,8 @@
   position: relative;
 
   display: inline-flex;
-  width: 1em;
-  height: 1em;
+  width: 16px;
+  height: 16px;
 
   vertical-align: middle;
 
