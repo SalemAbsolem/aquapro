@@ -1,0 +1,1 @@
+var a=window.matchMedia("(max-width: 767.98px)"),o=window.matchMedia("(hover: hover)");o.matches&&(document.addEventListener("mouseover",t=>{t.target.classList.contains("social__link")&&(t.target.style.backgroundColor=t.target.dataset.hoverColor)}),document.addEventListener("mouseout",t=>{t.target.classList.contains("social__link")&&(t.target.style.backgroundColor=null)}));
