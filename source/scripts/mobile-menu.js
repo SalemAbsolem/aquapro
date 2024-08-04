@@ -1,6 +1,6 @@
-import { MOBILE_ONLY } from './constants.js';
+import { NOT_DESKTOP } from './constants.js';
 
-if(MOBILE_ONLY.matches) {
+if(NOT_DESKTOP.matches) {
   const header = document.querySelector('.header');
   const openMenuBtn = header.querySelector('.header__button-menu');
 
