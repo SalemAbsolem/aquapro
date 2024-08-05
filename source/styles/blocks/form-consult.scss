@@ -1,11 +1,27 @@
-// .form-consult {
-
-// }
+.form-consult,
+.consult form {
+  @media #{$tablet-only} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
 
 .form-consult__wrap-input {
   position: relative;
 
   margin: 0 0 10px;
+
+  @media #{$tablet-only} {
+    margin: 0;
+
+    &.form-consult__wrap-input--privacy {
+      grid-column: 1 / -1;
+      height: fit-content;
+
+      font-size: 18px;
+    }
+  }
 }
 
 .form-consult__label {
@@ -13,7 +29,7 @@
   top: 50%;
   left: 12px;
 
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: 12px;
   font-weight: 400;
 
@@ -28,13 +44,19 @@
     position: static;
     transform: none;
   }
+
+  @media #{$tablet-only} {
+    left: 20px;
+
+    font-size: 18px;
+  }
 }
 
 .form-consult__imput {
   width: 100%;
   padding: 14px 12px 10px;
 
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: 12px;
   font-weight: 400;
 
@@ -103,6 +125,10 @@
     transition: opacity $tr-fast;
   }
 
+  &.form-consult__imput--privacy:checked + .form-consult__label.form-consult__label--privacy {
+    opacity: 1;
+  }
+
   &.form-consult__imput--privacy:checked + .form-consult__label.form-consult__label--privacy .form-consult__checkbox-icon::after {
     width: 10px;
     height: 5px;
@@ -110,6 +136,26 @@
     border-width: 0 0 2px 2px;
 
     transition: width $tr-default, height $tr-default 0.4s, border-width $tr-default;
+
+    @media #{$tablet-only} {
+      width: 13px;
+      height: 6px;
+    }
+  }
+
+  @media #{$tablet-only} {
+    font-size: 18px;
+
+    &:not(.form-consult__imput--privacy) {
+      height: 62px;
+      padding: 19px 20px 10px;
+
+      border-radius: 18px;
+    }
+
+    &.form-consult__imput--privacy {
+      height: fit-content;
+    }
   }
 }
 
@@ -123,7 +169,6 @@
   vertical-align: middle;
 
   background-color: $color-light-gray;
-  // border: 2px solid $color-gray;
   border-radius: 5px;
 
   transition: background-color $tr-default;
@@ -147,6 +192,13 @@
 
     transition: width $tr-default 0.4s, height $tr-default, border-width $tr-default 0.4s;
   }
+
+  @media #{$tablet-only} {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 8px;
+  }
 }
 
 .form-consult__error-text {
@@ -168,10 +220,19 @@
   &:empty {
     display: none;
   }
+
+  @media #{$tablet-only} {
+    max-width: 209px;
+    padding: 10px;
+
+    font-size: 12px;
+
+    border-radius: 10px;
+  }
 }
 
 .form-consult__checkbox-link {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: 12px;
   font-weight: 400;
   color: inherit;
@@ -193,8 +254,17 @@
 
     transition: opacity $tr-fast;
   }
+
+  @media #{$tablet-only} {
+    font-size: 18px;
+    text-underline-offset: 3px;
+  }
 }
 
 .form-consult__button {
   margin-top: 20px;
+
+  @media #{$tablet-only} {
+    margin: 0;
+  }
 }

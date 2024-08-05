@@ -1,6 +1,10 @@
-// .main {
+.main {
+  padding: 44px 0 0;
 
-// }
+  @media #{$tablet-only} {
+    padding: 60px 0 0;
+  }
+}
 
 .main__section {
   padding: 0 10px;
@@ -13,6 +17,16 @@
 
   &.main__section--consult {
     margin-bottom: 36px;
+  }
+
+  @media #{$tablet-only} {
+    padding: 0 20px;
+    margin-bottom: 96px;
+
+    &.main__section--hero,
+    &.main__section--consult {
+      margin-bottom: 48px;
+    }
   }
 }
 
@@ -27,5 +41,11 @@
 
   &.main__section-title--white {
     color: $color-white;
+  }
+
+  @media #{$tablet-only} {
+    margin-bottom: 36px;
+
+    font-size: 48px;
   }
 }

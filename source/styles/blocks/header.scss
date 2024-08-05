@@ -21,7 +21,28 @@
     border-bottom: 1px solid $color-gray;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    background-color: $color-white;
+
+    transition: opacity $tr-default, visibility $tr-default;
+  }
+
   &.header--menu-open {
+    &::before {
+      opacity: 1;
+
+      visibility: visible;
+    }
+
     .header__menu {
       opacity: 1;
 
@@ -33,6 +54,28 @@
 
       background-color: $color-blue;
       border-color: $color-blue;
+
+      @media #{$hover} {
+        &:hover {
+          background-color: $color-white;
+          border-color: $color-gray;
+        }
+
+        &:hover::after,
+        &:hover::before {
+          background-color: $color-blue;
+        }
+      }
+
+      &:active {
+        background-color: $color-white;
+        border-color: $color-gray;
+      }
+
+      &:active::after,
+      &:active::before {
+        background-color: $color-blue;
+      }
     }
 
     .header__button-menu::after,
@@ -47,6 +90,20 @@
 
     .header__button-menu::before {
       transform: translate(-50%, -50%) rotate(-135deg);
+    }
+  }
+
+  @media #{$tablet-only} {
+    width: 768px;
+    padding: 10px 10px 10px 20px;
+
+    &.header--menu-open {
+      /* stylelint-disable-next-line max-nesting-depth */
+      .header__button-menu::after,
+      .header__button-menu::before {
+        width: 20px;
+        height: 2px;
+      }
     }
   }
 }
@@ -68,8 +125,17 @@
 .header__button-wrap {
   position: relative;
   z-index: 100;
+
+  @media #{$not-mobile} {
+    display: flex;
+    gap: 36px;
+  }
 }
 
-// .header__button {
+.header__button-phone {
+  display: none;
 
-// }
+  @media #{$not-mobile} {
+    display: flex;
+  }
+}

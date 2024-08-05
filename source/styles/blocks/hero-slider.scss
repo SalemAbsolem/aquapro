@@ -5,6 +5,13 @@
   overflow: hidden;
 
   border-radius: 0 0 18px 18px;
+
+  @media #{$tablet-only} {
+    max-height: 1039px;
+    height: 1039px;
+
+    border-radius: 0 0 24px 24px;
+  }
 }
 
 // .hero-slider__content {

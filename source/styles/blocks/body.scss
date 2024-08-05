@@ -6,6 +6,10 @@
   color: $color-black;
 
   background-color: $color-white;
+
+  @media #{$tablet-only} {
+    font-size: 24px;
+  }
 }
 
 .body__container {
@@ -13,6 +17,10 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
 }
 
 // .body__header {

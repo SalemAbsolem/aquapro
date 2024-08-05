@@ -35,9 +35,11 @@
     <meta name="theme-color" content="#fbf7f7">
 
     <!-- Предзагрузка шрифтов -->
-    <!-- Не будет тут?? -->
     <!-- <link rel="preload" href="<?bloginfo('template_url')?>/assets/fonts/involve/involve-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous"> -->
+    <link rel="preload" href="fonts/involve/involve-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/involve/involve-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/involve/involve-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/involve/involve-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
     <!-- <?php wp_head(); ?> -->
     <!-- Всё, что ниже подключится в WP -->
@@ -165,7 +167,7 @@
               Узнать стоимость
             </span>
           </a>
-          <a class="header__button-phone button button--phone" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow"  style="display: none;">
+          <a class="header__button-phone button button--phone" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow">
             <span class="button__text visually-hidden">
               Позвонить
             </span>
@@ -263,7 +265,7 @@
         </section>
         <section  class="main__section advanteges">
           <h2 class="main__section-title">
-            Почему стоит выбрать именно нас?
+            Почему стоит выбрать<br>именно нас?
           </h2>
           <ol class="advanteges__list">
             <li class="advanteges__item">
@@ -378,16 +380,19 @@
           <h2 class="main__section-title">
             О нас
           </h2>
-          <p class="about__description">
-            Качественные материалы, безопасные конструкции и долговечность - прочный фундамент компании “Аквапро”.
-          </p>
-          <div class="about__image-wrap">
-            <img class="about__image" src="images/about-1@2x.png" width="4032" height="3024" alt="#">
+          <div class="about__group">
+            <p class="about__description">
+              Качественные материалы, безопасные конструкции и долговечность - прочный фундамент компании “Аквапро”.
+              <span class="about__decoration about__decoration--top"></span>
+              <span class="about__decoration about__decoration--left"></span>
+            </p>
+            <div class="about__image-wrap">
+              <img class="about__image" src="images/about-1@2x.png" width="4032" height="3024" alt="#">
+            </div>
           </div>
           <p class="about__description about__description--with-background">
             Мы соблюдаем все необходимые стандарты фильтрации, поэтому Вы сможете наслаждаться плаванием в бассейне с кристально чистой водой
           </p>
-
             <div class="about__image-wrap">
               <img class="about__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
             </div>
@@ -740,9 +745,8 @@
               </label>
               <span class="form-consult__error-text"></span>
             </p>
-            <p class="form-consult__wrap-input">
+            <p class="form-consult__wrap-input form-consult__wrap-input--privacy">
               <input class="form-consult__imput form-consult__imput--privacy visually-hidden" type="checkbox" name="privacy" id="privacy" required>
-              <!-- <span  class="form-consult__checkbox-icon"></span> -->
               <label class="form-consult__label form-consult__label--privacy" for="privacy"><span  class="form-consult__checkbox-icon"></span>
                 Даю согласие на&ensp;</label><a class="form-consult__checkbox-link" href="#">обработку персональных данных</a>
             </p>
@@ -814,7 +818,7 @@
             <h2 class="footer__group-title">
               Контакты
             </h2>
-            <ul class="footer__group-contacts contacts">
+            <ul class="footer__group-contacts contacts contacts--footer">
               <li class="contacts__item">
                 <a class="contacts__link" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow">
                   8 (999) 435 21 33
@@ -853,7 +857,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__social social">
+          <div class="footer__social social social--footer">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/telegram@2x.png');" data-hover-color="#2e9cb4">
@@ -888,7 +892,7 @@
               *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена
             </p>
           </div>
-          <p class="footer__group footer__group-developer">
+          <p class="footer__group footer__group--developer">
             <span class="footer__group-subtitle">
               Сайт разработан:
             </span>

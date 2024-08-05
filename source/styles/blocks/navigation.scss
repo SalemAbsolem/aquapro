@@ -13,6 +13,18 @@
     .navigation__link {
       font-size: 16px;
     }
+
+    @media #{$tablet-only} {
+      .navigation__item {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      .navigation__link {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -23,8 +35,16 @@
 }
 
 .navigation__item {
+  display: flex;
+
   &:not(:last-child) {
     margin-bottom: 12px;
+  }
+
+  @media #{$tablet-only} {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -54,6 +74,10 @@
     -webkit-text-stroke: 0.5px;
 
     transition: color $tr-fast;
+  }
+
+  @media #{$tablet-only} {
+    font-size: 48px;
   }
 }
 

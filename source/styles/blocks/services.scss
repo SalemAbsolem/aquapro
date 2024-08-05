@@ -39,6 +39,24 @@
 
     border-radius: 18px 0 0;
   }
+
+  @media #{$tablet-only} {
+    min-height: 437px;
+    padding: 25px;
+
+    border-radius: 36px 36px 0;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      width: 224px;
+      height: 84px;
+
+      border-radius: 36px 0 0;
+    }
+  }
 }
 
 .services__header {
@@ -55,12 +73,23 @@
   font-size: 18px;
   line-height: 1.3;
   color: $color-white;
+
+  @media #{$tablet-only} {
+    margin: 0 0 24px;
+
+    font-size: 36px;
+  }
 }
 
 .services__icon-wrap {
   height: 30px;
   width: auto;
   margin-left: 10px;
+
+  @media #{$tablet-only} {
+    height: 57px;
+    margin-left: 20px;
+  }
 }
 
 .services__icon {
@@ -81,6 +110,11 @@
   z-index: 10;
 
   margin: auto 0 0 auto;
+
+  @media #{$tablet-only} {
+    top: 25px;
+    left: 25px;
+  }
 }
 
 .services__decoration {
@@ -93,16 +127,31 @@
   border-bottom-right-radius: 120px;
 
   box-shadow: 9px 9px 0 9px $color-white;
+
+  @media #{$tablet-only} {
+    width: 36px;
+    height: 36px;
+
+    box-shadow: 18px 18px 0 18px $color-white;
+  }
 }
 
 .services__decoration--top {
   bottom: 50px;
   right: 0;
+
+  @media #{$tablet-only} {
+    bottom: 84px;
+  }
 }
 
 .services__decoration--left {
   bottom: 0;
   right: 139px;
+
+  @media #{$tablet-only} {
+    right: 224px;
+  }
 }
 
 .services__background-wrap {

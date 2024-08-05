@@ -1,6 +1,7 @@
 .menu {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100vh;
   padding: 68px 10px 10px;
 
@@ -11,18 +12,34 @@
   overflow-y: auto;
 
   transition: opacity $tr-default, visibility $tr-default;
+
+  @media #{$tablet-only} {
+    padding: 157px 20px 30px;
+  }
 }
 
 .menu__navigation {
   margin: 0 0 48px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 120px;
+  }
 }
 
 .menu__contacts {
   margin: 0 0 48px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 60px;
+  }
 }
 
 .menu__social {
   margin: 0 0 24px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 88px;
+  }
 }
 
 // .menu__button {

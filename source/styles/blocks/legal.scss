@@ -5,8 +5,16 @@
 }
 
 .legal__item {
+  display: flex;
+
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media #{$tablet-only} {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -36,6 +44,10 @@
     -webkit-text-stroke: 0.5px;
 
     transition: color $tr-fast;
+  }
+
+  @media #{$tablet-only} {
+    font-size: 18px;
   }
 }
 

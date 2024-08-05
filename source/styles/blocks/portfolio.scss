@@ -4,11 +4,19 @@
 
 .portfolio__header {
   margin-bottom: 12px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 24px;
+  }
 }
 
 .portfolio__button-wrap {
   display: flex;
   gap: 10px;
+
+  @media #{$tablet-only} {
+    gap: 20px;
+  }
 }
 
 // .portfolio__button {
@@ -19,6 +27,10 @@
   @include normalize-list;
 
   margin: 0 0 12px;
+
+  @media #{$tablet-only} {
+    margin: 0 0 36px;
+  }
 }
 
 .portfolio__item {
@@ -31,6 +43,17 @@
 
   &:not(:last-of-type) {
     margin-bottom: 12px;
+  }
+
+  @media #{$tablet-only} {
+    max-height: 393px;
+    height: 393px;
+
+    border-radius: 24px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
   }
 }
 

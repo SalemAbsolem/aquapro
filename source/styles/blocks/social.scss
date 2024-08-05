@@ -1,6 +1,22 @@
-// .social {
+.social {
+  @media #{$tablet-only} {
+    &.social--footer {
+      .social__list {
+        gap: 13px;
+        margin: 0 0 14px;
+      }
 
-// }
+      .social__link {
+        width: 30px;
+        height: 30px;
+      }
+
+      .social__notification {
+        font-size: 12px;
+      }
+    }
+  }
+}
 
 .social__list {
   @include normalize-list;
@@ -9,6 +25,11 @@
   flex-wrap: wrap;
   gap: 8px;
   margin: 0 0 10px;
+
+  @media #{$tablet-only} {
+    gap: 23px;
+    margin: 0 0 12px;
+  }
 }
 
 // .social__item {
@@ -32,10 +53,21 @@
 
     transition: background-color $tr-fast, opacity $tr-fast;
   }
+
+  @media #{$tablet-only} {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 .social__notification {
   font-size: 12px;
 
   opacity: 0.5;
+
+  @media #{$tablet-only} {
+    max-width: 385px;
+
+    font-size: 16px;
+  }
 }

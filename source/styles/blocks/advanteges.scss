@@ -63,6 +63,38 @@
 
     border-radius: 0 0 12px;
   }
+
+  @media #{$tablet-only} {
+    grid-template-columns: 82px 1fr;
+    padding: 25px;
+
+    border-radius: 27px;
+
+    &::before {
+      top: -15px;
+      left: -15px;
+
+      width: 62px;
+      height: 62px;
+      padding: 10px;
+
+      font-size: 24px;
+
+      border-radius: 18px;
+    }
+
+    &::after {
+      content: "";
+      width: 82px;
+      height: 82px;
+
+      border-radius: 0 0 27px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .advanteges__title {
@@ -74,6 +106,12 @@
   font-size: 18px;
   line-height: 1.3;
   color: $color-black;
+
+  @media #{$tablet-only} {
+    margin: 0 0 40px;
+
+    font-size: 36px;
+  }
 }
 
 .advanteges__description {
@@ -104,14 +142,32 @@
     background-color: $color-gray;
     border-top-left-radius: 120px;
   }
+
+  @media #{$tablet-only} {
+    width: 27px;
+    height: 27px;
+
+    &::before {
+      width: 27px;
+      height: 27px;
+    }
+  }
 }
 
 .advanteges__decoration--top {
   top: 0;
   left: 40px;
+
+  @media #{$tablet-only} {
+    left: 82px;
+  }
 }
 
 .advanteges__decoration--left {
   top: 40px;
   left: 0;
+
+  @media #{$tablet-only} {
+    top: 82px;
+  }
 }

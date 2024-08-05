@@ -8,6 +8,15 @@
   border-radius: 18px;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    max-width: 728px;
+    width: 728px;
+    margin: 0 auto 40px;
+    padding: 38px 20px 20px;
+
+    border-radius: 24px;
+  }
 }
 
 .footer__wrap {
@@ -16,10 +25,20 @@
   column-gap: 22px;
 
   max-width: 100%;
+
+  @media #{$tablet-only} {
+    grid-template-columns: 258px repeat(2, 1fr);
+    align-items: flex-start;
+    column-gap: 60px;
+  }
 }
 
 .footer__logo {
   grid-row: span 2;
+
+  @media #{$tablet-only} {
+    grid-row: unset;
+  }
 }
 
 .footer__group {
@@ -27,13 +46,41 @@
     margin-bottom: 20px;
   }
 
-  // &.footer__group--contacts {
-
-  // }
-
   &.footer__group--legal {
     grid-column: 1 / -1;
     margin-bottom: 20px;
+  }
+
+  &.footer__group--contacts {
+    margin: 0;
+  }
+
+  &.footer__group--developer {
+    margin: 0;
+  }
+
+  @media #{$tablet-only} {
+    &.footer__group--navigation {
+      grid-row: span 3;
+      margin-bottom: 36px;
+    }
+
+    &.footer__group--contacts {
+      grid-row: span 3;
+      margin-bottom: 36px;
+    }
+
+    &.footer__group--legal {
+      grid-column: 2 / span 2;
+      grid-row: 4 / span 2;
+    }
+
+    &.footer__group--developer {
+      grid-column: 1 / span 1;
+      grid-row: 6 / span 1;
+      display: inline-flex;
+      height: fit-content;
+    }
   }
 }
 
@@ -44,24 +91,32 @@
   font-size: 12px;
 
   opacity: 0.5;
-}
 
-.footer__group-contacts {
-  margin: 0;
+  @media #{$tablet-only} {
+    margin: 0 0 20px;
+
+    font-size: 18px;
+  }
 }
 
 .footer__button {
   grid-column: 1 / -1;
   margin: 20px 0 30px;
+
+  @media #{$tablet-only} {
+    grid-column: 1 / 2;
+    margin: 25px 0 40px;
+  }
 }
 
 .footer__social {
   grid-column: 1 / -1;
+
+  @media #{$tablet-only} {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 2;
+  }
 }
-
-// .footer__group-developer {
-
-// }
 
 .footer__group-subtitle {
   font-size: 12px;
@@ -103,13 +158,23 @@
 
       transition: bottom $tr-fast, opacity $tr-fast;
     }
+
+    @media #{$tablet-only} {
+      width: 96px;
+      margin-left: 5px;
+    }
   }
 }
 
-// .footer__icon-wrap {
+.footer__icon-wrap {
+  @media #{$tablet-only} {
+    display: flex;
+    height: 100%;
+    width: auto;
+  }
+}
 
-// }
-
-// .footer__icon {
-
-// }
+.footer__icon {
+  width: 100%;
+  height: 100%;
+}

@@ -8,6 +8,14 @@
   min-height: 525px;
   height: 525px;
   padding: 10px;
+
+  @media #{$tablet-only} {
+    min-width: 768px;
+    width: 768px;
+    min-height: 1039px;
+    height: 1039px;
+    padding: 20px;
+  }
 }
 
 .hero-slide__title {
@@ -16,6 +24,12 @@
   font-size: 24px;
   font-weight: 600;
   color: $color-white;
+
+  @media #{$tablet-only} {
+    margin: auto 0 24px;
+
+    font-size: 60px;
+  }
 }
 
 .hero-slide__description {
@@ -26,6 +40,10 @@
 
 .hero-slide__button {
   margin-top: 36px;
+
+  @media #{$tablet-only} {
+    margin-top: 85px;
+  }
 }
 
 .hero-slide__background-wrap {

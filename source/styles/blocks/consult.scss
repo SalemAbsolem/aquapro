@@ -4,6 +4,10 @@
 
 .consult__description {
   margin: 0 0 24px;
+
+  @media #{$tablet-only} {
+    font-size: 18px;
+  }
 }
 
 // .consult__form {

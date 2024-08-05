@@ -10,6 +10,14 @@
   border-radius: 18px;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    min-height: 638px;
+    padding: 30px 20px;
+    margin: 0 20px 96px;
+
+    border-radius: 36px;
+  }
 }
 
 .calculate__button {
