@@ -5,7 +5,7 @@
 .portfolio__header {
   margin-bottom: 12px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     margin-bottom: 24px;
   }
 }
@@ -14,7 +14,7 @@
   display: flex;
   gap: 10px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     gap: 20px;
   }
 }
@@ -28,8 +28,14 @@
 
   margin: 0 0 12px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     margin: 0 0 36px;
+  }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
@@ -45,7 +51,7 @@
     margin-bottom: 12px;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     max-height: 393px;
     height: 393px;
 
@@ -53,6 +59,12 @@
 
     &:not(:last-of-type) {
       margin-bottom: 20px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
     }
   }
 }

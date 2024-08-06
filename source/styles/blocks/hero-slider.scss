@@ -12,6 +12,13 @@
 
     border-radius: 0 0 24px 24px;
   }
+
+  @media #{$desktop-only} {
+    max-height: 615px;
+    height: 615px;
+
+    border-radius: 0 0 24px 24px;
+  }
 }
 
 // .hero-slider__content {

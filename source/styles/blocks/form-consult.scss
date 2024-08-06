@@ -5,6 +5,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 320px;
+    gap: 20px;
+  }
 }
 
 .form-consult__wrap-input {
@@ -12,7 +18,7 @@
 
   margin: 0 0 10px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     margin: 0;
 
     &.form-consult__wrap-input--privacy {
@@ -45,7 +51,7 @@
     transform: none;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     left: 20px;
 
     font-size: 18px;
@@ -143,7 +149,7 @@
     }
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 18px;
 
     &:not(.form-consult__imput--privacy) {
@@ -193,7 +199,7 @@
     transition: width $tr-default 0.4s, height $tr-default, border-width $tr-default 0.4s;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     width: 24px;
     height: 24px;
 
@@ -221,13 +227,17 @@
     display: none;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     max-width: 209px;
     padding: 10px;
 
     font-size: 12px;
 
     border-radius: 10px;
+  }
+
+  @media #{$not-mobile} {
+    max-width: 240px;
   }
 }
 
@@ -255,7 +265,7 @@
     transition: opacity $tr-fast;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 18px;
     text-underline-offset: 3px;
   }
@@ -264,7 +274,7 @@
 .form-consult__button {
   margin-top: 20px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     margin: 0;
   }
 }

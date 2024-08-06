@@ -18,6 +18,14 @@
 
     border-radius: 36px;
   }
+
+  @media #{$desktop-only} {
+    min-height: 350px;
+    padding: 30px;
+    margin: 0 20px 96px;
+
+    border-radius: 36px;
+  }
 }
 
 .calculate__button {

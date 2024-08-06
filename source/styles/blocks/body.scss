@@ -7,7 +7,7 @@
 
   background-color: $color-white;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 24px;
   }
 }
@@ -20,6 +20,10 @@
 
   @media #{$tablet-only} {
     max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
   }
 }
 

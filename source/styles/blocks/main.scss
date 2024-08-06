@@ -1,7 +1,7 @@
 .main {
   padding: 44px 0 0;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     padding: 60px 0 0;
   }
 }
@@ -19,13 +19,19 @@
     margin-bottom: 36px;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     padding: 0 20px;
     margin-bottom: 96px;
 
     &.main__section--hero,
     &.main__section--consult {
       margin-bottom: 48px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    &.main__section--consult {
+      margin-bottom: 0;
     }
   }
 }
@@ -43,7 +49,7 @@
     color: $color-white;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     margin-bottom: 36px;
 
     font-size: 48px;

@@ -12,6 +12,24 @@
       }
     }
   }
+
+  @media #{$desktop-only} {
+    &.contacts--footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 5px 20px;
+      margin: 0;
+
+      .contacts__item:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      .contacts__link {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .contacts__item {

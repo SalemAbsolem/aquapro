@@ -38,6 +38,24 @@
       }
     }
   }
+
+  @media #{$desktop-only} {
+    &.logo--header {
+      .logo__image-wrap {
+        width: 177px;
+        height: 24px;
+      }
+    }
+
+    &.logo--footer {
+      height: 112px;
+
+      .logo__image-wrap {
+        width: 270px;
+        height: auto;
+      }
+    }
+  }
 }
 
 .logo__image {
@@ -61,7 +79,7 @@
 
   opacity: 0.5;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     right: auto;
     left: 0;
 

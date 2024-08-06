@@ -1,11 +1,14 @@
-// .consult {
-
-// }
+.consult {
+  @media #{$desktop-only} {
+    position: relative;
+    z-index: 2;
+  }
+}
 
 .consult__description {
   margin: 0 0 24px;
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 18px;
   }
 }

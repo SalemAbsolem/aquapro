@@ -25,6 +25,27 @@
         font-size: 18px;
       }
     }
+
+    @media #{$desktop-only} {
+      .navigation__list {
+        justify-content: start;
+        gap: 5px 20px;
+      }
+
+      .navigation__item {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
+      .navigation__link {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media #{$desktop-only} {
+    width: 100%;
   }
 }
 
@@ -32,6 +53,13 @@
   @include normalize-list;
 
   margin: 0;
+
+  @media #{$desktop-only} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-around;
+  }
 }
 
 .navigation__item {
@@ -44,6 +72,12 @@
   @media #{$tablet-only} {
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
   }
 }
@@ -78,6 +112,10 @@
 
   @media #{$tablet-only} {
     font-size: 48px;
+  }
+
+  @media #{$desktop-only} {
+    font-size: 16px;
   }
 }
 

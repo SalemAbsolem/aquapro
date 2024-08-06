@@ -16,6 +16,12 @@
       margin-bottom: 8px;
     }
   }
+
+  @media #{$desktop-only} {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .legal__link {
@@ -46,7 +52,7 @@
     transition: color $tr-fast;
   }
 
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 18px;
   }
 }

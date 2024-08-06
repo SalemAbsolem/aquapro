@@ -16,6 +16,19 @@
   @media #{$tablet-only} {
     padding: 157px 20px 30px;
   }
+
+  @media #{$desktop-only} {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    min-height: 22px;
+    padding: 0;
+    margin-top: 5px;
+
+    background-color: $color-transparent;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .menu__navigation {
@@ -23,6 +36,10 @@
 
   @media #{$tablet-only} {
     margin-bottom: 120px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0;
   }
 }
 
@@ -32,6 +49,10 @@
   @media #{$tablet-only} {
     margin-bottom: 60px;
   }
+
+  @media #{$desktop-only} {
+    display: none;
+  }
 }
 
 .menu__social {
@@ -40,8 +61,14 @@
   @media #{$tablet-only} {
     margin-bottom: 88px;
   }
+
+  @media #{$desktop-only} {
+    display: none;
+  }
 }
 
-// .menu__button {
-
-// }
+.menu__button-price {
+  @media #{$desktop-only} {
+    display: none;
+  }
+}
