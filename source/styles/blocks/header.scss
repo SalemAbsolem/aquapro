@@ -11,15 +11,15 @@
 
   background-color: $color-white-menu;
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    z-index: 100;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: auto 0 0;
+  //   z-index: 100;
 
-    display: block;
-    border-bottom: 1px solid $color-gray;
-  }
+  //   display: block;
+  // border-bottom: 1px solid $color-gray;
+  // }
 
   &::before {
     content: "";
@@ -27,20 +27,22 @@
     inset: 0;
     z-index: 100;
 
-    opacity: 0;
+    // opacity: 0;
 
-    visibility: hidden;
+    // visibility: hidden;
 
-    background-color: $color-white;
+    background-color: $color-white-menu;
+    border-bottom: 1px solid $color-gray;
 
-    transition: opacity $tr-default, visibility $tr-default;
+    transition: opacity $tr-default, visibility $tr-default, background-color $tr-default;
   }
 
   &.header--menu-open {
     &::before {
-      opacity: 1;
+      // opacity: 1;
 
-      visibility: visible;
+      // visibility: visible;
+      background-color: $color-white;
     }
 
     .header__menu {
@@ -50,6 +52,8 @@
     }
 
     .header__button-menu {
+      padding: 0;
+
       font-size: 0;
 
       background-color: $color-blue;

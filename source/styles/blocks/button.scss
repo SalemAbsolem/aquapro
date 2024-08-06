@@ -173,7 +173,7 @@
     border: 2px solid $color-gray;
     border-radius: 8px;
 
-    transition: background-color $tr-default, border-color $tr-default, color $tr-default, font-size $tr-default;
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default, font-size $tr-default, padding  $tr-default;
 
     &::after,
     &::before {
