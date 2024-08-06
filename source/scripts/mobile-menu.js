@@ -1,14 +1,15 @@
-import { NOT_DESKTOP } from './constants.js';
+const openMobileMenu = (media, block) => {
+  if(media.matches && block) {
+    const openMenuBtn = block.querySelector('.header__button-menu');
 
-if(NOT_DESKTOP.matches) {
-  const header = document.querySelector('.header');
-  const openMenuBtn = header.querySelector('.header__button-menu');
+    openMenuBtn.addEventListener('click', () => {
+      if(block.classList.contains('header--menu-open')) {
+        block.classList.remove('header--menu-open');
+      } else {
+        block.classList.add('header--menu-open');
+      }
+    });
+  }
+};
 
-  openMenuBtn.addEventListener('click', () => {
-    if(header.classList.contains('header--menu-open')) {
-      header.classList.remove('header--menu-open');
-    } else {
-      header.classList.add('header--menu-open');
-    }
-  });
-}
+export {openMobileMenu};
