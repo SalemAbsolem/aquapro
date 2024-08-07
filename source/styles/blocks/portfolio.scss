@@ -19,23 +19,31 @@
   }
 }
 
-// .portfolio__button {
+// .portfolio__button-tab {
 
 // }
 
 .portfolio__list {
   @include normalize-list;
 
+  display: none;
   margin: 0 0 12px;
+
+  &.portfolio__list--active {
+    display: block;
+  }
 
   @media #{$not-mobile} {
     margin: 0 0 36px;
   }
 
   @media #{$desktop-only} {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+    &.portfolio__list--active {
+      display: grid;
+    }
   }
 }
 

@@ -5,6 +5,8 @@
 .about__content {
   position: relative;
 
+  overflow: hidden;
+
   @media #{$desktop-only} {
     display: grid;
     grid-template-columns: 748px 392px;
@@ -121,11 +123,11 @@
     position: relative;
 
     max-width: 508px;
-    padding: 0 16px 16px 0;
+    padding: 16px 16px 24px;
     margin: 0;
 
     background-color: $color-white;
-    border-radius: 0 0 24px;
+    border-radius: 24px 0;
 
     &.about__description--with-background {
       position: static;

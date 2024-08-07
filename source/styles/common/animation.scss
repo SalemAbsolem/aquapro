@@ -1,1 +1,9 @@
-// Файл для анимаций в проекте
+@keyframes width100 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -7,23 +7,54 @@
 
   background-color: $color-white;
 
+  &.body--blue {
+    .body__container::after {
+      background-color: $color-blue;
+    }
+  }
+
   @media #{$not-mobile} {
     font-size: 24px;
   }
 }
 
 .body__container {
+  position: relative;
+
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+
+    display: block;
+    height: 100%;
+
+    mask-image: url("../../images/mobile-bg-mask.svg");
+    mask-position: top center;
+    mask-repeat: repeat-y;
+    mask-size: cover;
+  }
+
   @media #{$tablet-only} {
     max-width: 768px;
+
+    &::after {
+      mask-image: url("../../images/tablet-bg-mask.svg");
+    }
   }
 
   @media #{$desktop-only} {
     max-width: 1200px;
+
+    &::after {
+      mask-image: url("../../images/desktop-bg-mask.svg");
+    }
   }
 }
 

@@ -1,4 +1,5 @@
-import { MOBILE_ONLY, TABLET_ONLY, NOT_DESKTOP,
+import {
+  MOBILE_ONLY, TABLET_ONLY, NOT_DESKTOP,
   HOVER,
   HEADER, MAIN, FOOTER,
   WIDTH_SCREEN
@@ -12,3 +13,14 @@ openMobileMenu(NOT_DESKTOP, HEADER);
 
 import { socialHover } from './social-icon.js';
 socialHover(HOVER);
+
+import { tabsInit } from './tabs.js';
+tabsInit('portfolio');
+
+import { heroSliderInit, projectSliderInit } from './sliders.js';
+window.addEventListener('load', () => {
+  heroSliderInit();
+  projectSliderInit();
+});
+
+import './validator-form.js';

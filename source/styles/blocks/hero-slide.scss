@@ -38,12 +38,20 @@
 
     font-size: 60px;
   }
+
+  @media #{$desktop-only} {
+    width: 75%;
+  }
 }
 
 .hero-slide__description {
   margin: 0;
 
   color: $color-white;
+
+  @media #{$desktop-only} {
+    width: 50%;
+  }
 }
 
 .hero-slide__button {

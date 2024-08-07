@@ -67,7 +67,7 @@
 
     background-color: $color-white;
 
-    border-radius: 0 0 12px;
+    border-radius: 12px 0;
   }
 
   @media #{$not-mobile} {
@@ -94,7 +94,7 @@
       width: 82px;
       height: 82px;
 
-      border-radius: 0 0 27px;
+      border-radius: 27px 0;
     }
 
     &:not(:last-child) {

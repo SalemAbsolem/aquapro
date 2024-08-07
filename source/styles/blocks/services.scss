@@ -24,7 +24,7 @@
   min-height: 254px;
   padding: 10px;
 
-  border-radius: 18px 18px 0;
+  border-radius: 18px 18px 12px;
 
   overflow: hidden;
 
@@ -45,14 +45,14 @@
 
     background-color: $color-white;
 
-    border-radius: 18px 0 0;
+    border-radius: 18px 0 12px;
   }
 
   @media #{$not-mobile} {
     min-height: 437px;
     padding: 25px;
 
-    border-radius: 36px 36px 0;
+    border-radius: 36px 36px 18px;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -62,7 +62,7 @@
       width: 224px;
       height: 84px;
 
-      border-radius: 36px 0 0;
+      border-radius: 36px 0 18px;
     }
   }
 

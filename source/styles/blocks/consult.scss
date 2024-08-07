@@ -11,6 +11,10 @@
   @media #{$not-mobile} {
     font-size: 18px;
   }
+
+  @media #{$desktop-only} {
+    width: 60%;
+  }
 }
 
 // .consult__form {
