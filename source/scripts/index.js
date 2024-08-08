@@ -18,9 +18,7 @@ import { tabsInit } from './tabs.js';
 tabsInit('portfolio');
 
 import { heroSliderInit, projectSliderInit } from './sliders.js';
-// window.addEventListener('load', () => {
 heroSliderInit();
 projectSliderInit();
-// });
 
 import './validator-form.js';

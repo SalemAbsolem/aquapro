@@ -178,6 +178,7 @@
 
     min-width: 30px;
     min-height: 30px;
+    width: 74px;
     height: 30px;
     padding: 3px 11px;
 
@@ -189,7 +190,7 @@
     border: 2px solid $color-gray;
     border-radius: 8px;
 
-    transition: background-color $tr-default, border-color $tr-default, color $tr-default, font-size $tr-default, padding  $tr-default;
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default, font-size $tr-default, padding $tr-default, width $tr-default;
 
     &::after,
     &::before {
@@ -230,6 +231,7 @@
     @media #{$tablet-only} {
       min-width: 40px;
       min-height: 40px;
+      width: 78px;
       height: 40px;
       padding: 8px 13px;
 

@@ -9,7 +9,17 @@
 
   &.body--blue {
     .body__container::after {
-      background-color: $color-blue;
+      background-image: url("../../images/blue-mobile-bg-mask.svg");
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$tablet-only} {
+        background-image: url("../../images/blue-tablet-bg-mask.svg");
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$desktop-only} {
+        background-image: url("../../images/blue-desktop-bg-mask.svg");
+      }
     }
   }
 
@@ -35,26 +45,17 @@
     display: block;
     height: 100%;
 
-    mask-image: url("../../images/mobile-bg-mask.svg");
-    mask-position: top center;
-    mask-repeat: repeat-y;
-    mask-size: cover;
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: cover;
   }
 
   @media #{$tablet-only} {
     max-width: 768px;
-
-    &::after {
-      mask-image: url("../../images/tablet-bg-mask.svg");
-    }
   }
 
   @media #{$desktop-only} {
     max-width: 1200px;
-
-    &::after {
-      mask-image: url("../../images/desktop-bg-mask.svg");
-    }
   }
 }
 

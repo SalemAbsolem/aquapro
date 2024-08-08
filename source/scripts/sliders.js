@@ -1,5 +1,31 @@
 import Swiper from 'swiper';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { MOBILE_ONLY, TABLET_ONLY } from './constants.js';
+
+const makeVideoBg = (src) => {
+  const source = `<source type="video/mp4" src="${src}">`;
+
+  return source;
+};
+
+const videoSlideInit = (sliderClass, slideClass, mobile, tablet) => {
+  const slider = document.querySelector(`.${sliderClass}`);
+  const videoSlide = slider.querySelectorAll(`.${slideClass}--video`);
+
+
+  for(let i = 0; i < videoSlide.length; i++) {
+    const backgroundSlides = videoSlide[i].querySelector(`.${slideClass}__background-wrap`);
+    const video = backgroundSlides.querySelector('video');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('playsinline', '');
+
+    if(mobile.matches || tablet.matches) {
+      video.innerHTML = makeVideoBg(backgroundSlides.dataset.videoVerticalSrc);
+    } else {
+      video.innerHTML = makeVideoBg(backgroundSlides.dataset.videoHorizontalSrc);
+    }
+  }
+};
 
 const projectSliderInit = () => {
   const projectSlider = document.querySelector('.project');
@@ -31,6 +57,8 @@ const heroSliderInit = () => {
   if(!heroSlider) {
     return;
   }
+
+  videoSlideInit('hero-slider__content', 'hero-slide', MOBILE_ONLY, TABLET_ONLY);
 
   new Swiper('.hero-slider__content', {
     modules: [Autoplay, Pagination],
