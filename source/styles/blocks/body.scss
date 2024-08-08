@@ -23,6 +23,54 @@
     }
   }
 
+  &.body--green {
+    .body__container::after {
+      background-image: url("../../images/green-mobile-bg-mask.svg");
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$tablet-only} {
+        background-image: url("../../images/green-tablet-bg-mask.svg");
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$desktop-only} {
+        background-image: url("../../images/green-desktop-bg-mask.svg");
+      }
+    }
+  }
+
+  &.body--brown {
+    .body__container::after {
+      background-image: url("../../images/brown-mobile-bg-mask.svg");
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$tablet-only} {
+        background-image: url("../../images/brown-tablet-bg-mask.svg");
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$desktop-only} {
+        background-image: url("../../images/brown-desktop-bg-mask.svg");
+      }
+    }
+  }
+
+  &.body--gray {
+    .body__container::after {
+      background-image: url("../../images/gray-mobile-bg-mask.svg");
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$tablet-only} {
+        background-image: url("../../images/gray-tablet-bg-mask.svg");
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media #{$desktop-only} {
+        background-image: url("../../images/gray-desktop-bg-mask.svg");
+      }
+    }
+  }
+
   @media #{$not-mobile} {
     font-size: 24px;
   }

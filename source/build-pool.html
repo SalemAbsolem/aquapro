@@ -49,12 +49,12 @@
     <!-- Предзагрузка страниц -->
     <link rel="prefetch" href="404.html">
   </head>
-  <body class="page__body body body--blue">
+  <body class="page__body body body--brown">
     <div class="body__container">
       <!-- чтобы открыть меню класс-модификатор menu-open -->
       <header class="body__header header">
         <!-- если главная, то атрибут aria-current и класс  -->
-        <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
+        <a class="header__logo logo logo--header" href="/">
           <!-- если главная, то атрибут aria-hidden -->
           <span class="visually-hidden" aria-hidden="true">
             Перейти на главную
@@ -68,7 +68,7 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
+                <a class="navigation__link" href="/">
                   <span class="navigation__link-text">
                     Главная
                   </span>
@@ -181,473 +181,130 @@
         </div>
       </header>
       <main class="body__main main">
-        <h1 class="visually-hidden">
-          АКВАПРО - строим каркасные и стационарные бассейны.
-        </h1>
-        <section class="main__section main__section--hero hero-slider">
-          <h2 class="main__section-title visually-hidden">
-            Акция и предложения от АКВАПРО
-          </h2>
-          <div class="hero-slider__content">
-            <ul class="hero-slider__list">
-              <li class="hero-slider__item hero-slide">
-                <h3 class="hero-slide__title">
-                  Строим каркасные и стационарные бассейны
-                </h3>
-                <p class="hero-slide__description">
-                  Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
-                </p>
-                <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
-                  <span class="button__text">
-                    Узнать стоимость бассейна
-                  </span>
-                </a>
-                <div class="hero-slide__background-wrap">
-                  <img class="hero-slide__background-image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
-                </div>
-              </li>
-              <li class="hero-slider__item hero-slide hero-slide--video">
-                <h3 class="hero-slide__title">
-                  Строим каркасные и стационарные бассейны
-                </h3>
-                <p class="hero-slide__description">
-                  Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
-                </p>
-                <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
-                  <span class="button__text">
-                    Узнать стоимость бассейна
-                  </span>
-                </a>
-                <!-- видео слайд -->
-                <div class="hero-slide__background-wrap" data-image-src="images/pool-example@2x.jpeg" data-video-vertical-src="https://dl.dropboxusercontent.com/scl/fi/csojyy6vsaweln26ql4xm/vertical.mp4?rlkey=l6xle3ea3706z4vy7653cms3k&st=cboy4h7z&dl=0" data-video-horizontal-src="https://dl.dropboxusercontent.com/scl/fi/zv4b184t56pmd08fgci8l/horizontal.mp4?rlkey=fi9t2e4smodroh8747jqbvgfq&st=adi0sjl1&dl=0">
-                  <video class="hero-slide__background-video" poster="images/pool-example@2x.jpeg" width="320" height="500" preload="auto" autoplay loop muted>
-                  </video>
-                </div>
-              </li>
-              <li class="hero-slider__item hero-slide">
-                <h3 class="hero-slide__title">
-                  Строим каркасные и стационарные бассейны
-                </h3>
-                <p class="hero-slide__description">
-                  Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
-                </p>
-                <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
-                  <span class="button__text">
-                    Узнать стоимость бассейна
-                  </span>
-                </a>
-                <div class="hero-slide__background-wrap">
-                  <img class="hero-slide__background-image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
-                </div>
-              </li>
-              <li class="hero-slider__item hero-slide">
-                <h3 class="hero-slide__title">
-                  Строим каркасные и стационарные бассейны
-                </h3>
-                <p class="hero-slide__description">
-                  Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
-                </p>
-                <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
-                  <span class="button__text">
-                    Узнать стоимость бассейна
-                  </span>
-                </a>
-                <div class="hero-slide__background-wrap">
-                  <img class="hero-slide__background-image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
-                </div>
-              </li>
-            </ul>
-            <div class="hero-slider__pagination pagination"></div>
+        <section class="main__section hero-block">
+          <div class="hero-block__content hero-slide">
+            <h1 class="main__section-title hero-slide__title">
+              Строим каркасные и стационарные бассейны
+            </h1>
+            <p class="hero-slide__description">
+              Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
+            </p>
+            <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
+              <span class="button__text">
+                Узнать стоимость бассейна
+              </span>
+            </a>
+            <div class="hero-slide__background-wrap">
+              <img class="hero-slide__background-image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
+            </div>
           </div>
         </section>
-        <section  class="main__section advanteges">
+        <section class="main__section choose-pool">
           <h2 class="main__section-title">
-            Почему стоит выбрать<br>именно нас?
+            Выбрать бассейн
           </h2>
-          <ol class="advanteges__list">
-            <li class="advanteges__item">
-              <h3 class="advanteges__title">
-                Делаем качественно
+          <ul class="choose-pool__list">
+            <li class="choose-pool__item">
+              <h3 class="choose-pool__title">
+                Стационарный
               </h3>
-              <p class="advanteges__description">
-                Делаем свою работу качественно. Наши бассейны прослужат больше 30 лет.
+              <p class="choose-pool__description">
+                Технологичные бассейны любой сложности под ключ
               </p>
-              <span class="advanteges__decoration advanteges__decoration--top"></span>
-              <span class="advanteges__decoration advanteges__decoration--left"></span>
-            </li>
-            <li class="advanteges__item">
-              <h3 class="advanteges__title">
-                Гарантия сервиса
-              </h3>
-              <p class="advanteges__description">
-                Гарантируем  бесплатное сервисное обслуживание от 1 года
-              </p>
-              <span class="advanteges__decoration advanteges__decoration--top"></span>
-              <span class="advanteges__decoration advanteges__decoration--left"></span>
-            </li>
-            <li class="advanteges__item">
-              <h3 class="advanteges__title">
-                Новые технологии
-              </h3>
-              <p class="advanteges__description">
-                Создали уникальную технологию установки бассейнов, которая позволяет сократить срок работы до 20%
-              </p>
-              <span class="advanteges__decoration advanteges__decoration--top"></span>
-              <span class="advanteges__decoration advanteges__decoration--left"></span>
-            </li>
-            <li class="advanteges__item">
-              <h3 class="advanteges__title">
-                Уникальные решения
-              </h3>
-              <p class="advanteges__description">
-                Предлагаем индивидуальные дизайнерские решения для каждого клиента
-              </p>
-              <span class="advanteges__decoration advanteges__decoration--top"></span>
-              <span class="advanteges__decoration advanteges__decoration--left"></span>
-            </li>
-          </ol>
-        </section>
-        <section  class="main__section services">
-          <h2 class="main__section-title">
-            Наши услуги
-          </h2>
-          <ul class="services__list">
-            <li class="services__item">
-              <div class="services__header">
-                <h3 class="services__title">
-                  Строительство бассейнов
-                </h3>
-                <div class="services__icon-wrap">
-                  <img class="services__icon" src="images/pool-icon@2x.png" width="37" height="30" alt="#" aria-hidden="true">
-                </div>
-              </div>
-              <p class="services__description">
-                Мы строим каркасные и стационарные бассейны для дома и улицы.
-              </p>
-              <a class="services__button button button--more button--brown-text" href="#">
+              <a class="choose-pool__button button button--blue-text button--choose-pool" href="pool-page.html">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <span class="services__decoration services__decoration--top"></span>
-              <span class="services__decoration services__decoration--left"></span>
-              <div class="services__background-wrap">
-                <img class="services__background-image" src="images/service-1@2x.png" width="4032" height="3024" alt="#">
+              <div class="choose-pool__background-wrap">
+                <img class="choose-pool__background-image" src="images/service-1@2x.png" width="4032" height="3024" alt="#">
               </div>
             </li>
-            <li class="services__item">
-              <div class="services__header">
-                <h3 class="services__title">
-                  Обслуживание бассейнов
-                </h3>
-                <div class="services__icon-wrap">
-                  <img class="services__icon" src="images/pool-icon@2x.png" width="33" height="33" alt="#" aria-hidden="true">
-                </div>
-              </div>
-              <p class="services__description">
-                Проводим диагностику технического состояния бассейна и устраняем неполадки.
+            <li class="choose-pool__item choose-pool__item--reverse">
+              <h3 class="choose-pool__title">
+                Каркасный
+              </h3>
+              <p class="choose-pool__description">
+                Только с листовым жестким каркасом
               </p>
-              <a class="services__button button button--more button--blue-text" href="#">
+              <a class="choose-pool__button button button--green-text button--choose-pool" href="pool-page.html">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <span class="services__decoration services__decoration--top"></span>
-              <span class="services__decoration services__decoration--left"></span>
-              <div class="services__background-wrap">
-                <img class="services__background-image" src="images/service-2@2x.png" width="4032" height="3024" alt="#">
+              <div class="choose-pool__background-wrap">
+                <img class="choose-pool__background-image" src="images/service-1@2x.png" width="4032" height="3024" alt="#">
               </div>
             </li>
           </ul>
         </section>
-        <section  class="main__section calculate">
-          <h2 class="main__section-title main__section-title--white">
-            Рассчитаем смету за 1 час и предложим наиболее выгодный вариант под Ваш запрос.
-          </h2>
-          <a class="calculate__button button button--with-arrow button--price button--calculate" href="#">
-            <span class="button__text">
-              Рассчитать стоимость
-            </span>
-          </a>
-          <div class="calculate__background-wrap">
-            <img class="calculate__background-image" src="images/calculate@2x.jpeg" width="3840" height="2160" alt="#">
-          </div>
-        </section>
-        <section  class="main__section about">
+        <section class="main__section how-we-work">
           <h2 class="main__section-title">
-            О нас
+            Как мы работаем:
           </h2>
-          <div class="about__content">
-            <div class="about__group">
-              <p class="about__description">
-                Качественные материалы, безопасные конструкции и долговечность - прочный фундамент компании “Аквапро”.
-                <span class="about__decoration about__decoration--top"></span>
-                <span class="about__decoration about__decoration--left"></span>
+          <ol class="how-we-work__list">
+            <li class="how-we-work__item">
+              <h3 class="how-we-work__title">
+                Коммуникация
+              </h3>
+              <p class="how-we-work__description">
+                “Аквапро” всегда начинает сотрудничество с коммуникации с клиентом. Нам важно учесть все Ваши пожелания и предложить лучшие бассейны по самым приятным ценам
               </p>
-              <div class="about__image-wrap">
-                <img class="about__image" src="images/about-1@2x.png" width="4032" height="3024" alt="#">
+              <div class="how-we-work__icon-wrap">
+                <img class="how-we-work__icon" src="images/pipe-icon@2x.png" width="33" height="33" alt="">
               </div>
-            </div>
-            <p class="about__description about__description--with-background">
-              Мы соблюдаем все необходимые стандарты фильтрации, поэтому Вы сможете наслаждаться плаванием в бассейне с кристально чистой водой
-            </p>
-              <div class="about__image-wrap">
-                <img class="about__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
+              <div class="how-we-work__decoration-block">
+                <span class="how-we-work__decoration how-we-work__decoration--top"></span>
+                <span class="how-we-work__decoration how-we-work__decoration--left"></span>
               </div>
-            <div class="about__button-container">
-              <a class="about__button button button--more button--blue-text" href="#">
-                <span class="button__text">
-                  Подробнее
-                </span>
-              </a>
-              <span class="about__decoration about__decoration--top"></span>
-              <span class="about__decoration about__decoration--left"></span>
-            </div>
-          </div>
+            </li>
+            <li class="how-we-work__item">
+              <h3 class="how-we-work__title">
+                Договор
+              </h3>
+              <p class="how-we-work__description">
+                Мы заключаем договоры на все виды работ: от строительства бассейна до его обслуживания. При подписании договора на регулярное обслуживание предоставляем дополнительную гарантию на оборудование на 1 год
+              </p>
+              <div class="how-we-work__icon-wrap">
+                <img class="how-we-work__icon" src="images/pipe-icon@2x.png" width="33" height="33" alt="">
+              </div>
+              <div class="how-we-work__decoration-block">
+                <span class="how-we-work__decoration how-we-work__decoration--top"></span>
+                <span class="how-we-work__decoration how-we-work__decoration--left"></span>
+              </div>
+            </li>
+            <li class="how-we-work__item">
+              <h3 class="how-we-work__title">
+                Новые технологии
+              </h3>
+              <p class="how-we-work__description">
+                С нами монтаж каркасного бассейна будет занимать 1 неделю, а стационарного - от 2 до 4 месяцев (в зависимости от сложности)
+              </p>
+              <div class="how-we-work__icon-wrap">
+                <img class="how-we-work__icon" src="images/pipe-icon@2x.png" width="33" height="33" alt="">
+              </div>
+              <div class="how-we-work__decoration-block">
+                <span class="how-we-work__decoration how-we-work__decoration--top"></span>
+                <span class="how-we-work__decoration how-we-work__decoration--left"></span>
+              </div>
+            </li>
+            <li class="how-we-work__item how-we-work__item--empty">
+              <div class="how-we-work__background-wrap">
+                <img class="how-we-work__background" src="images/service-1@2x.png" width="4032" height="3024" alt="#">
+              </div>
+            </li>
+          </ol>
         </section>
+
+
+
         <section  class="main__section portfolio">
           <div class="portfolio__header">
             <h2 class="main__section-title">
               Наше портфолио
             </h2>
-            <div class="portfolio__button-wrap">
-              <button class="portfolio__button-tab button button--tab button--brown" type="button" data-tab="build">
-                <span class="button__text">
-                  Строительство
-                </span>
-              </button>
-              <button class="portfolio__button-tab button button--tab button--blue" type="button" data-tab="service">
-                <span class="button__text">
-                  Обслуживание
-                </span>
-              </button>
-            </div>
           </div>
           <ul class="portfolio__list" data-tab="build">
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
-          </ul>
-          <ul class="portfolio__list" data-tab="service">
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
-            <li class="portfolio__item project">
-              <div class="project__text">
-                <h3 class="project__title">
-                  Название проекта
-                </h3>
-                <p class="project__description">
-                  Здесь Вы можете оставить контактные данные для связи. Мы перезвоним и поможем подобрать бассейн по лучшей цене.
-                </p>
-              </div>
-              <ul class="project__slider">
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-                <li class="project__slide">
-                  <div class="project__image-wrap">
-                    <img class="project__image" src="images/about-2@2x.png" width="3024" height="4032" alt="#">
-                  </div>
-                </li>
-              </ul>
-              <button class="project__slide-button project__slide-button--slide-prev button button--slide-portfolio button--slide-prev" type="button">
-                <span class="button__text visually-hidden">
-                  Предыдущее изображение.
-                </span>
-              </button>
-              <button class="project__slide-button project__slide-button--slide-next button button--slide-portfolio button--slide-next" type="button">
-                <span class="button__text visually-hidden">
-                  Следующее изображение.
-                </span>
-              </button>
-            </li>
             <li class="portfolio__item project">
               <div class="project__text">
                 <h3 class="project__title">
@@ -862,35 +519,35 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
+                <a class="navigation__link" href="/">
                   <span class="navigation__link-text">
                     Главная
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">
+                <a class="navigation__link" href="build-pool.html">
                   <span class="navigation__link-text">
                     Строительство
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">
+                <a class="navigation__link" href="service-pool.html">
                   <span class="navigation__link-text">
                     Обслуживание
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">
+                <a class="navigation__link" href="about.html">
                   <span class="navigation__link-text">
                     О нас
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">
+                <a class="navigation__link" href="blog.html">
                   <span class="navigation__link-text">
                     Статьи
                   </span>

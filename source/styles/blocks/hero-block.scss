@@ -1,0 +1,25 @@
+.hero-block {
+  position: relative;
+
+  max-height: 525px;
+  height: 525px;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 0 0 18px 18px;
+
+  @media #{$tablet-only} {
+    max-height: 1039px;
+    height: 1039px;
+
+    border-radius: 0 0 24px 24px;
+  }
+
+  @media #{$desktop-only} {
+    max-height: 615px;
+    height: 615px;
+
+    border-radius: 0 0 24px 24px;
+  }
+}

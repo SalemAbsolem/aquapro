@@ -339,6 +339,23 @@
     }
   }
 
+  &.button--choose-pool {
+    width: fit-content;
+    padding: 8px 16px;
+
+    background-color: $color-white;
+    border: 2px solid $color-gray;
+    border-radius: 12px;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+
+    @media #{$not-mobile} {
+      padding: 15px 30px;
+
+      border-radius: 18px;
+    }
+  }
+
   &.button--brown-text {
     color: $color-brown;
 
@@ -386,6 +403,32 @@
       background-color: $color-blue;
 
       border-color: $color-blue;
+
+      transition: background-color $tr-fast, border-color $tr-fast, color $tr-fast;
+    }
+  }
+
+  &.button--green-text {
+    color: $color-green;
+
+    transition: background-color $tr-default, border-color $tr-default, color $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white-menu;
+
+        background-color: $color-green;
+
+        border-color: $color-green;
+      }
+    }
+
+    &:active {
+      color: $color-white-menu;
+
+      background-color: $color-green;
+
+      border-color: $color-green;
 
       transition: background-color $tr-fast, border-color $tr-fast, color $tr-fast;
     }
