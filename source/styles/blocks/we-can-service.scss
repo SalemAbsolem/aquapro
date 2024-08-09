@@ -1,0 +1,262 @@
+// .we-can-service {
+
+// }
+
+.we-can-service__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media #{$tablet-only} {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    overflow: hidden;
+  }
+
+  @media #{$desktop-only} {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    overflow: hidden;
+  }
+}
+
+.we-can-service__lead {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  padding: 20px;
+
+  color: $color-white;
+
+  background-color: $color-blue;
+  border-radius: 18px;
+
+  @media #{$tablet-only} {
+    max-height: 476px;
+    width: 519px;
+    padding: 30px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+  }
+
+  @media #{$desktop-only} {
+    width: 519px;
+    padding: 30px;
+    margin: 0 0 20px;
+
+    border-radius: 24px;
+  }
+}
+
+.we-can-service__decoration-block {
+  @media #{$tablet-only} {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 0 20px 20px 0;
+
+    background-color: $color-white;
+    border-radius: 24px 0;
+
+    .we-can-service__decoration {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      border-top-left-radius: 120px;
+
+      box-shadow: -12px -12px 0 12px $color-white;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &.we-can-service__decoration--top {
+        top: 0;
+        right: -24px;
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &.we-can-service__decoration--left {
+        left: 0;
+        bottom: -24px;
+      }
+    }
+  }
+
+  @media #{$desktop-only} {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.we-can-service__decoration {
+  display: none;
+}
+
+.we-can-service__background-wrap {
+  width: 100%;
+  height: 175px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  @media #{$tablet-only} {
+    height: 496px;
+    margin: 0 0 20px;
+
+    border-radius: 24px;
+  }
+
+  @media #{$desktop-only} {
+    position: absolute;
+    inset: 0 0 0 auto;
+    z-index: -1;
+
+    height: 100%;
+    width: 621px;
+
+    border-radius: 24px;
+  }
+}
+
+.we-can-service__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.we-can-service__service-wrap {
+  padding: 20px;
+
+  background-color: $color-light-gray;
+  border-radius: 18px;
+
+  @media #{$not-mobile} {
+    width: 100%;
+    padding: 30px;
+
+    border-radius: 24px;
+  }
+
+  @media #{$desktop-only} {
+    position: relative;
+    width: 865px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      z-index: -1;
+
+      display: block;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+
+      background-color: $color-white;
+      border-radius: 0 24px;
+    }
+
+    .we-can-service__decoration {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      border-bottom-left-radius: 120px;
+
+      box-shadow: -12px 12px 0 12px $color-white;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &.we-can-service__decoration--top {
+        top: -44px;
+        right: 302px;
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &.we-can-service__decoration--left {
+        right: -44px;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.we-can-service__service-title {
+  margin: 0;
+
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+
+  @media #{$not-mobile} {
+    font-size: 36px;
+  }
+}
+
+.we-can-service__service-list {
+  @include normalize-list;
+
+  margin: 24px 0 0;
+
+  @media #{$not-mobile} {
+    margin: 36px 0 0;
+  }
+}
+
+.we-can-service__service-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../../icons/check.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  @media #{$not-mobile} {
+    &::before {
+      top: 4px;
+
+      width: 20px;
+      height: 20px;
+
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.we-can-service__service-text {
+  margin: 0 0 0 23px;
+
+  @media #{$not-mobile} {
+    margin: 0 0 0 35px;
+  }
+}

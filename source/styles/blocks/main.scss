@@ -19,6 +19,10 @@
     margin-bottom: 36px;
   }
 
+  &.main__section--about-page {
+    margin-top: 24px;
+  }
+
   @media #{$not-mobile} {
     padding: 0 20px;
     margin-bottom: 96px;
@@ -26,6 +30,10 @@
     &.main__section--hero,
     &.main__section--consult {
       margin-bottom: 48px;
+    }
+
+    &.main__section--about-page {
+      margin-top: 48px;
     }
   }
 

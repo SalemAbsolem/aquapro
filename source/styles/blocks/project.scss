@@ -73,12 +73,16 @@
   width: 300px;
   margin: 0;
 
+  border-radius: 18px;
+
   overflow-x: visible;
 
   @media #{$not-mobile} {
     height: 393px;
     max-width: 728px;
     width: 728px;
+
+    border-radius: 24px;
   }
 
   @media #{$desktop-only} {

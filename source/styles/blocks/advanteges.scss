@@ -166,22 +166,22 @@
       height: 27px;
     }
   }
-}
 
-.advanteges__decoration--top {
-  top: 0;
-  left: 40px;
+  &.advanteges__decoration--top {
+    top: 0;
+    left: 40px;
 
-  @media #{$not-mobile} {
-    left: 82px;
+    @media #{$not-mobile} {
+      left: 82px;
+    }
   }
-}
 
-.advanteges__decoration--left {
-  top: 40px;
-  left: 0;
+  &.advanteges__decoration--left {
+    top: 40px;
+    left: 0;
 
-  @media #{$not-mobile} {
-    top: 82px;
+    @media #{$not-mobile} {
+      top: 82px;
+    }
   }
 }
