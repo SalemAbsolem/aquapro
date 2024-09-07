@@ -54,7 +54,7 @@
       <!-- чтобы открыть меню класс-модификатор menu-open -->
       <header class="body__header header">
         <!-- если главная, то атрибут aria-current и класс  -->
-        <a class="header__logo logo logo--header" href="/">
+        <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
           <!-- если главная, то атрибут aria-hidden -->
           <span class="visually-hidden" aria-hidden="true">
             Перейти на главную
@@ -63,13 +63,12 @@
             <img class="logo__image" src="images/logotype.svg" width="113" height="15" alt="Логотип АКВАПРО">
           </div>
         </a>
-
         <div class="header__menu menu">
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link" href="/">
+                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
                   <span class="navigation__link-text">
                     Главная
                   </span>
@@ -182,9 +181,167 @@
         </div>
       </header>
       <main class="body__main main">
-        <h1 class="visually-hidden">
-          АКВАПРО - строим каркасные и стационарные бассейны.
-        </h1>
+        <article class="article">
+          <header class="article__header">
+            <h1 class="article__title">
+              Название Статьи
+            </h1>
+            <div class="article__header-background">
+              <img class="article__background-image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
+            </div>
+          </header>
+          <div class="article__content">
+            <h2>
+              Являясь всего лишь частью
+            </h2>
+            <h3>
+              Являясь всего лишь частью
+            </h3>
+            <h4>
+              Являясь всего лишь частью
+            </h4>
+            <h5>
+              Являясь всего лишь частью
+            </h5>
+            <h6>
+              Являясь всего лишь частью
+            </h6>
+            <p>
+              Являясь всего лишь частью общей картины, базовые сценарии поведения пользователей формируют глобальную экономическую сеть и при этом —  представлены в исключительно положительном свете. В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса могут быть функционально разнесены на независимые элементы. В целом, конечно, консультация с широким активом создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса новых принципов формирования материально-технической и кадровой базы.
+            </p>
+            <p>
+              Являясь всего лишь частью общей картины, базовые сценарии поведения пользователей формируют глобальную экономическую сеть и при этом —  представлены в исключительно положительном свете. В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса могут быть функционально разнесены на независимые элементы. В целом, конечно, консультация с широким активом создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса новых принципов формирования материально-технической и кадровой базы.
+            </p>
+            <p>
+              <img class="article__image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
+            </p>
+            <p>
+              <img class="article__image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
+            </p>
+            <ul>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+            </ul>
+            <p>
+              <img class="article__image" src="images/pool-example@2x.jpeg" width="4096" height="3072" alt="#">
+            </p>
+            <ol>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+              <li>
+                Являясь всего лишь частью общей картины, базовые сценарии поведения
+              </li>
+            </ol>
+            <hr>
+          </div>
+        </article>
+        <div class="go-back">
+          <a class="go-back__button button button--blue-text button--go-back" href="blog.html">
+            <span class="button__text">
+              Вернуться к статьям
+            </span>
+          </a>
+        </div>
+        <section class="main__section main__section--more-articles more-articles">
+          <h2 class="main__section-title">
+            Еще статьи
+          </h2>
+          <ul class="more-articles__list">
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+                <span class="more-articles__read">
+                  Читать статью
+                </span>
+              </a>
+            </li>
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+                <span class="more-articles__read">
+                  Читать статью
+                </span>
+              </a>
+            </li>
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+              </a>
+            </li>
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+                <span class="more-articles__read">
+                  Читать статью
+                </span>
+              </a>
+            </li>
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+                <span class="more-articles__read">
+                  Читать статью
+                </span>
+              </a>
+            </li>
+            <li class="more-articles__item">
+              <a class="more-articles__link" href="#" style="background-image: url('images/pool-example@2x.jpeg');">
+                <span class="more-articles__name-article">
+                  Статья 1
+                </span>
+                <span class="more-articles__fragment">
+                  Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи Отрывок статьи
+                </span>
+                <span class="more-articles__read">
+                  Читать статью
+                </span>
+              </a>
+            </li>
+          </ul>
+          <button class="more-articles__button-more button button--show-more" type="button">
+            <span class="button__text">
+              Открыть еще
+            </span>
+          </button>
+        </section>
+
+
         <section class="main__section main__section--consult consult">
           <h2 class="main__section-title">
             Получить консультацию
@@ -216,7 +373,7 @@
               <label class="form-consult__label form-consult__label--privacy" for="privacy"><span  class="form-consult__checkbox-icon"></span>
                 Даю согласие на&ensp;</label><a class="form-consult__checkbox-link" href="#">обработку персональных данных</a>
             </p>
-            <button class="form-consult__button button button--submit button--blue-text" type="submit">
+            <button class="form-consult__button button button--submit button--blue-text" type="button">
               <span class="button__text">
                 Отправить
               </span>
@@ -244,35 +401,35 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link" href="/">
+                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
                   <span class="navigation__link-text">
                     Главная
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="build-pool.html">
+                <a class="navigation__link" href="#">
                   <span class="navigation__link-text">
                     Строительство
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="service-pool.html">
+                <a class="navigation__link" href="#">
                   <span class="navigation__link-text">
                     Обслуживание
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="about.html">
+                <a class="navigation__link" href="#">
                   <span class="navigation__link-text">
                     О нас
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="blog.html">
+                <a class="navigation__link" href="#">
                   <span class="navigation__link-text">
                     Статьи
                   </span>
@@ -380,6 +537,46 @@
         </div>
       </footer>
     </div>
+    <div class="cookie">
+      <p class="cookie__text">
+        Сайт использует cookie-файлы, чтобы сделать ваше пребывание на нём максимально удобным
+      </p>
+      <button class="cookie__button button button--cookie button--blue-text" type="button">
+        <span class="button__text">
+          ОК
+        </span>
+      </button>
+    </div>
+    <template id="success">
+      <div class="success">
+        <div class="success__wrap">
+          <div class="success__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="success__message">
+            Ваши данные отправлены!<br>
+            Мы&nbsp;скоро с&nbsp;Вами свяжемся!
+          </p>
+        </div>
+      </div>
+    </template>
+    <template id="error">
+      <div class="error">
+        <div class="error__wrap">
+          <div class="error__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="error__message">
+            К&nbsp;сожалению, что-то пошло не&nbsp;так.<br>
+            Попробуйте отправить данные еще раз!
+          </p>
+        </div>
+      </div>
+    </template>
     <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

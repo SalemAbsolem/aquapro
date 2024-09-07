@@ -655,6 +655,46 @@
         </div>
       </footer>
     </div>
+    <div class="cookie">
+      <p class="cookie__text">
+        Сайт использует cookie-файлы, чтобы сделать ваше пребывание на нём максимально удобным
+      </p>
+      <button class="cookie__button button button--cookie button--blue-text" type="button">
+        <span class="button__text">
+          ОК
+        </span>
+      </button>
+    </div>
+    <template id="success">
+      <div class="success">
+        <div class="success__wrap">
+          <div class="success__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="success__message">
+            Ваши данные отправлены!<br>
+            Мы&nbsp;скоро с&nbsp;Вами свяжемся!
+          </p>
+        </div>
+      </div>
+    </template>
+    <template id="error">
+      <div class="error">
+        <div class="error__wrap">
+          <div class="error__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="error__message">
+            К&nbsp;сожалению, что-то пошло не&nbsp;так.<br>
+            Попробуйте отправить данные еще раз!
+          </p>
+        </div>
+      </div>
+    </template>
     <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

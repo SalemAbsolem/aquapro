@@ -32,7 +32,7 @@
   overflow: hidden;
 
   @media #{$desktop-only} {
-    &.choose-pool__item--reverse {
+    &.choose-pool__item:nth-child(2n) {
       .choose-pool__title,
       .choose-pool__description,
       .choose-pool__button {

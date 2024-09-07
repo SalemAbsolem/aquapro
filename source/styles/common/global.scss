@@ -5,8 +5,8 @@
 }
 
 ::selection {
-  background: $color-blue;
-  color: $color-white;
+  background: $color-light-gray;
+  color: $color-blue;
 }
 
 @media #{$desktop-only} {

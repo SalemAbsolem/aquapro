@@ -16,44 +16,226 @@
     <!-- <link rel="icon" href="<?bloginfo('template_url')?>/assets/favicons/favicon-light.ico" type="image/x-icon" sizes="32x32" media="(prefers-color-scheme: dark)"> -->
     <!-- <link rel="icon" href="<?bloginfo('template_url')?>/assets/favicons/icon.svg" type="image/svg+xml"> -->
     <!-- <link rel="apple-touch-icon" href="<?bloginfo('template_url')?>/assets/favicons/apple-touch-icon.png" sizes="180x180"> -->
-    <!-- Изменить цвет на актуальный -->
-    <!-- <link rel="mask-icon" href="<?bloginfo('template_url')?>/assets/favicons/safari-pinned-tab.svg" color="#3c3c3c"> -->
+    <!-- <link rel="mask-icon" href="<?bloginfo('template_url')?>/assets/favicons/safari-pinned-tab.svg" color="#828282"> -->
     <!-- <link rel="manifest" href="<?bloginfo('template_url')?>/manifest.webmanifest"> -->
     <!-- <meta name="msapplication-config" content="<?bloginfo('template_url')?>/assets/favicons/browserconfig.xml"> -->
-    <!-- Изменить цвет на актуальный -->
-    <!-- <meta name="theme-color" content="#fbf7f7"> -->
+
     <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="32x32">
     <link rel="icon" href="favicons/favicon-dark.ico" type="image/x-icon" sizes="32x32" media="(prefers-color-scheme: light)">
     <link rel="icon" href="favicons/favicon-light.ico" type="image/x-icon" sizes="32x32" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" sizes="180x180">
-    <!-- Изменить цвет на актуальный -->
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#3c3c3c">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#828282">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <!-- Изменить цвет на актуальный -->
-    <meta name="theme-color" content="#fbf7f7">
+
+    <meta name="theme-color" content="#f9fbfc">
 
     <!-- Предзагрузка шрифтов -->
     <!-- <link rel="preload" href="<?bloginfo('template_url')?>/assets/fonts/involve/involve-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous"> -->
+    <link rel="preload" href="fonts/involve/involve-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/involve/involve-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/involve/involve-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/involve/involve-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
     <!-- <?php wp_head(); ?> -->
     <!-- Всё, что ниже подключится в WP -->
     <!-- START -->
-    <title>404</title>
-    <meta name="description" content="Страница не найдена">
+    <title>Главная страница</title>
+    <meta name="description" content="Текст описания страницы">
     <link rel="stylesheet" href="styles/styles.css">
     <!-- END -->
 
     <!-- Предзагрузка страниц -->
     <link rel="prefetch" href="404.html">
   </head>
-  <body class="page__body">
-    <main>
-      <h1>404</h1>
-      <p>Страница не найдена. <a href="/">Перейти на главную</a>.</p>
-    </main>
+  <body class="page__body body body--blue">
+    <div class="body__container">
+      <!-- чтобы открыть меню класс-модификатор menu-open -->
+      <header class="body__header header">
+        <!-- если главная, то атрибут aria-current и класс  -->
+        <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
+          <!-- если главная, то атрибут aria-hidden -->
+          <span class="visually-hidden" aria-hidden="true">
+            Перейти на главную
+          </span>
+          <div class="logo__image-wrap">
+            <img class="logo__image" src="images/logotype.svg" width="113" height="15" alt="Логотип АКВАПРО">
+          </div>
+        </a>
+        <div class="header__menu menu">
+          <nav class="menu__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <!-- для текущей страницы класс и атрибут current -->
+                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
+                  <span class="navigation__link-text">
+                    Главная
+                  </span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="build-pool.html">
+                  <span class="navigation__link-text">
+                    Строительство
+                  </span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="service-pool.html">
+                  <span class="navigation__link-text">
+                    Обслуживание
+                  </span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="about.html">
+                  <span class="navigation__link-text">
+                    О нас
+                  </span>
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="blog.html">
+                  <span class="navigation__link-text">
+                    Статьи
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="menu__contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow">
+                8 (999) 435 21 33
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="#" target="_blank" rel="noreferrer noopener nofollow">
+                Лиговский 215
+              </a>
+            </li>
+          </ul>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/telegram@2x.png');" data-hover-color="#2e9cb4">
+                  <span class="visually-hidden">
+                    Телеграм
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/vk@2x.png');" data-hover-color="#2e9cb4">
+                  <span class="visually-hidden">
+                    Вконтакте
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/wa@2x.png');" data-hover-color="#88ab68">
+                  <span class="visually-hidden">
+                    WhatsApp
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" rel="noreferrer noopener nofollow" style="mask-image: url('images/instagram@2x.png');" data-hover-color="#cf417d">
+                  <span class="visually-hidden">
+                    Instagram
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="social__notification">
+              *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена
+            </p>
+          </div>
+          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="#">
+            <span class="button__text">
+              Узнать стоимость бассейна
+            </span>
+          </a>
+        </div>
+        <div class="header__button-wrap">
+          <a class="header__button-price button button--header-price button--blue-text" href="#">
+            <span class="button__text">
+              Узнать стоимость
+            </span>
+          </a>
+          <a class="header__button-phone button button--phone" href="tel:+79994352133" target="_blank" rel="noreferrer noopener nofollow">
+            <span class="button__text visually-hidden">
+              Позвонить
+            </span>
+            <div class="button__icon-wrap">
+              <svg class="button__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.45 3.57a.52.52 0 0 0-.74 0L6.38 4.9a.48.48 0 0 0-.15.4c.5 3.64 1.8 6.96 3.95 9.63l-1.32 1.06a21.05 21.05 0 0 1-4.3-10.46c-.1-.68.15-1.36.62-1.83l1.33-1.33a2.22 2.22 0 0 1 3.14 0l3.3 3.3c.86.86.86 2.27 0 3.13l-.83.83c-.2.2-.2.53 0 .74l5.37 5.37c.2.2.53.2.74 0l.33-.34a2.22 2.22 0 0 1 3.13 0l3.1 3.1c.87.87.87 2.27 0 3.14l-.77.77c-.47.47-1.13.71-1.81.62-5.25-.67-9.34-2.77-12.27-5.82l1.22-1.17c2.64 2.74 6.36 4.68 11.26 5.31.14.02.3-.03.4-.14l.77-.77c.2-.2.2-.54 0-.74l-3.1-3.1a.52.52 0 0 0-.73 0l-.34.34c-.86.86-2.27.86-3.13 0l-5.37-5.37a2.22 2.22 0 0 1 0-3.14l.83-.83c.2-.2.2-.53 0-.74l-3.3-3.3Z" fill="#2E9CB4"/>
+              </svg>
+            </div>
+          </a>
+          <button class="header__button-menu button button--menu" type="button">
+            <span class="button__text">
+              Меню
+            </span>
+          </button>
+        </div>
+      </header>
+      <main class="body__main main main--page-not-found">
+        <section class="not-found-page">
+          <h1 class="not-found-page__title">
+            Ошибка 404
+          </h1>
+          <p class="not-found-page__message">
+            Кажется что-то пошло не так! Страница, которую вы запрашиваете, не существует. Возможно она была удалена, или вы набрали неверный адрес.
+          </p>
+          <a class="not-found-page__button button button--blue-text button--404" href="/">
+            <span class="button__text">
+              На главную
+            </span>
+          </a>
+        </section>
+      </main>
+      <div class="cookie">
+        <p class="cookie__text">
+          Сайт использует cookie-файлы, чтобы сделать ваше пребывание на нём максимально удобным
+        </p>
+        <button class="cookie__button button button--cookie button--blue-text" type="button">
+          <span class="button__text">
+            ОК
+          </span>
+        </button>
+      </div>
+    </div>
+    <template id="success">
+      <div class="success">
+        <div class="success__wrap">
+          <div class="success__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="success__message">
+            Ваши данные отправлены!<br>
+            Мы&nbsp;скоро с&nbsp;Вами свяжемся!
+          </p>
+        </div>
+      </div>
+    </template>
+    <template id="error">
+      <div class="error">
+        <div class="error__wrap">
+          <div class="error__button button button--close-modal" tabindex="0">
+            <span class="button__text visually-hidden">
+              Закрыть
+            </span>
+          </div>
+          <p class="error__message">
+            К&nbsp;сожалению, что-то пошло не&nbsp;так.<br>
+            Попробуйте отправить данные еще раз!
+          </p>
+        </div>
+      </div>
+    </template>
     <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

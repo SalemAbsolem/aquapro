@@ -1,4 +1,6 @@
 .body {
+  height: 100%;
+
   font-family: $primary-font;
   font-size: 16px;
   font-weight: 500;
@@ -79,10 +81,14 @@
 .body__container {
   position: relative;
 
-  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+
+  transform-origin: top center;
 
   &::after {
     content: "";
@@ -107,14 +113,47 @@
   }
 }
 
-// .body__header {
+.body__header {
+  max-width: 320px;
+  margin: 0 auto;
 
-// }
+  transform-origin: top center;
 
-// .body__main {
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
 
-// }
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+}
 
-// .body__footer {
+.body__main {
+  max-width: 320px;
+  margin: 0 auto;
 
-// }
+  transform-origin: top center;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+}
+
+.body__footer {
+  max-width: 320px;
+  margin: 0 auto;
+
+  transform-origin: top center;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+}

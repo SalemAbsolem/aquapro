@@ -1,8 +1,21 @@
 .main {
+  flex-grow: 1;
   padding: 56px 0 0;
+
+  &.main--quiz,
+  &.main--page-not-found {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media #{$not-mobile} {
     padding: 60px 0 0;
+  }
+
+  @media #{$desktop-only} {
+    &.main--page-not-found {
+      margin: 0 auto 0 0;
+    }
   }
 }
 
@@ -21,6 +34,10 @@
 
   &.main__section--about-page {
     margin-top: 24px;
+  }
+
+  &.main__section--quiz {
+    margin-bottom: 0;
   }
 
   @media #{$not-mobile} {

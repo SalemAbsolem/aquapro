@@ -8,8 +8,9 @@
 
   @media #{$desktop-only} {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 320px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    width: 820px;
   }
 }
 
@@ -23,6 +24,9 @@
 
     &.form-consult__wrap-input--privacy {
       grid-column: 1 / -1;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
       height: fit-content;
 
       font-size: 18px;
@@ -52,13 +56,21 @@
 
   opacity: 0.5;
 
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1);
   transform-origin: left;
+
+  cursor: pointer;
 
   transition: transform $tr-default, opacity $tr-default;
 
   &.form-consult__label--privacy {
     position: static;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-right: 0.5em;
+
     transform: none;
   }
 
@@ -103,7 +115,7 @@
   }
 
   &:not(.form-consult__input--privacy):focus + .form-consult__label:not(.form-consult__label--privacy),
-  // &:not(.form-consult__input--privacy):valid + .form-consult__label:not(.form-consult__label--privacy),
+  // &:not(.form-consult__input--privacy):invalid + .form-consult__label:not(.form-consult__label--privacy),
   &:not(.form-consult__input--privacy):not(:placeholder-shown) + .form-consult__label:not(.form-consult__label--privacy) {
     transform: translateY(-120%) scale(0.7);
   }
@@ -258,6 +270,7 @@
   font-size: 12px;
   font-weight: 400;
   color: inherit;
+  vertical-align: text-top;
   text-decoration: 1px solid underline;
   text-decoration-skip-ink: none;
 
