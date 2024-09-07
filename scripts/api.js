@@ -1,0 +1,1 @@
+var s=`${window.location.origin}/wp-json/contact-form-7/v1/contact-forms/`,e={SEND_DATA:"/feedback"},c={POST:"POST"},w=(o,n,a=c.GET,r=null)=>fetch(`${s}${n}${o}`,{method:a,body:r}).then(t=>{if(!t.ok)throw new Error(`${t.status}: ${t.statusText}`);return t.json()}).catch(t=>{throw new Error(t.message)}),T=(o,n)=>w(e.SEND_DATA,o,c.POST,n);export{T as sendData};
