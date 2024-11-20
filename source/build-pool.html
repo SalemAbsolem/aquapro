@@ -54,7 +54,7 @@
       <!-- чтобы открыть меню класс-модификатор menu-open -->
       <header class="body__header header">
         <!-- если главная, то атрибут aria-current и класс  -->
-        <a class="header__logo logo logo--header" href="/">
+        <a class="header__logo logo logo--header" href="index.html">
           <!-- если главная, то атрибут aria-hidden -->
           <span class="visually-hidden" aria-hidden="true">
             Перейти на главную
@@ -67,15 +67,14 @@
           <nav class="menu__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link" href="/">
+                <a class="navigation__link" href="index.html">
                   <span class="navigation__link-text">
                     Главная
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="build-pool.html">
+                <a class="navigation__link navigation__link--current" href="build-pool.html" aria-current="page">
                   <span class="navigation__link-text">
                     Строительство
                   </span>
@@ -151,14 +150,14 @@
               *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена
             </p>
           </div>
-          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="#">
+          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="quiz.html">
             <span class="button__text">
               Узнать стоимость бассейна
             </span>
           </a>
         </div>
         <div class="header__button-wrap">
-          <a class="header__button-price button button--header-price button--blue-text" href="#">
+          <a class="header__button-price button button--header-price button--blue-text" href="quiz.html">
             <span class="button__text">
               Узнать стоимость
             </span>
@@ -189,7 +188,7 @@
             <p class="hero-slide__description">
               Команда лучших специалистов в сфере технического обслуживания и строительства бассейнов со стажем более 20 лет
             </p>
-            <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="#">
+            <a class="hero-slide__button button button--on-hero-slide button--with-arrow button--price" href="quiz.html">
               <span class="button__text">
                 Узнать стоимость бассейна
               </span>
@@ -519,14 +518,14 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link" href="/">
+                <a class="navigation__link" href="index.html">
                   <span class="navigation__link-text">
                     Главная
                   </span>
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="build-pool.html">
+                <a class="navigation__link navigation__link--current" href="build-pool.html" aria-current="page">
                   <span class="navigation__link-text">
                     Строительство
                   </span>
@@ -572,7 +571,7 @@
               </li>
             </ul>
           </div>
-          <a class="footer__button button button--price button--footer-price button--blue-text" href="#">
+          <a class="footer__button button button--price button--footer-price button--blue-text" href="quiz.html">
             <span class="button__text">
               Рассчитать стоимость
             </span>
@@ -583,7 +582,8 @@
             </h2>
             <ul class="legal">
               <li class="legal__item">
-                <a class="legal__link legal__link--current" href="#">
+                <!-- current -->
+                <a class="legal__link" href="#">
                   <span class="legal__link-text">
                     Политика конфиденциальности и обработки персональных данных
                   </span>
@@ -637,7 +637,7 @@
             <span class="footer__group-subtitle">
               Сайт разработан:
             </span>
-            <a class="footer__group-link footer__group-link--developer" href="#" rel="nofollow noreferrer noopener" target="_blank">
+            <a class="footer__group-link footer__group-link--developer" href="https://cyclemedia.xyz" rel="nofollow noreferrer noopener" target="_blank">
               <span class="visually-hidden">
                 Cycle Media
               </span>

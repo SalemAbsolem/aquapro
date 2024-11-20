@@ -1,4 +1,4 @@
-import { makeElement } from './util.js';
+import { makeElement, createIdFromRangeGenerator } from './util.js';
 
 const dataTemplate = document.querySelector('#quiz-data');
 let data;
@@ -139,17 +139,19 @@ const branchGenerator = (container, branch, prefix) => {
       questions.forEach((el, i) => {
         const wrap = makeElement('p', {className: 'quiz__wrap-input'});
         let input;
+        const randomId = createIdFromRangeGenerator(1, 99999, true);
+        const id = `${el['value']}-${randomId()}`;
         if(elem['multiple']) {
-          input = makeElement('input', {className: 'quiz__input', type: 'checkbox', name: `${elem['name']}-${i + 1}`, value: el['value'], id: el['value']});
+          input = makeElement('input', {className: 'quiz__input', type: 'checkbox', name: `${elem['name']}-${i + 1}`, value: el['value'], id: id});
           input.classList.add('quiz__input--checkbox');
         } else {
-          input = makeElement('input', {className: 'quiz__input', type: 'radio', name: elem['name'], value: el['value'], id: el['value']});
+          input = makeElement('input', {className: 'quiz__input', type: 'radio', name: elem['name'], value: el['value'], id: id});
           input.classList.add('quiz__input--radio');
         }
         input.classList.add('visually-hidden');
         wrap.append(input);
         const label = makeElement('label', {className: 'quiz__label'});
-        label.setAttribute('for', el['value']);
+        label.setAttribute('for', id);
         const text = makeElement('span', {className: 'quiz__label-text', innerHTML: stringGenerate(el['question'])});
         const icon = makeElement('span', {className: 'quiz__label-icon'});
         label.append(text);

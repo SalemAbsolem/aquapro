@@ -79,4 +79,45 @@ const makeElement = (tagName, params) => {
   return element;
 };
 
-export { slideStartActiveClass, slideFinalActiveClass, makeElement };
+const getRandomInteger = (a, b) => {
+  const lower = Math.ceil(Math.min(a, b));
+  const upper = Math.floor(Math.max(a, b));
+  const result = Math.random() * (upper - lower + 1) + lower;
+  return Math.floor(result);
+};
+
+const createIdFromRangeGenerator = (min, max, random = false) => {
+  const previousValues = [];
+
+  return function () {
+    let currentValue;
+    if(random) {
+      currentValue = getRandomInteger(min, max);
+    } else {
+      if(previousValues.length === 0) {
+        currentValue = 1;
+      } else {
+        currentValue = previousValues[previousValues.length - 1];
+      }
+    }
+    if (previousValues.length >= (max - min + 1)) {
+      return null;
+    }
+    while (previousValues.includes(currentValue)) {
+      if(random) {
+        currentValue = getRandomInteger(min, max);
+      } else {
+        if(previousValues.length === 0) {
+          currentValue = 1;
+        } else {
+          currentValue = previousValues[previousValues.length - 1] + 1;
+        }
+      }
+    }
+    previousValues.push(currentValue);
+
+    return currentValue;
+  };
+};
+
+export { slideStartActiveClass, slideFinalActiveClass, makeElement, createIdFromRangeGenerator };

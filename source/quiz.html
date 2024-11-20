@@ -54,7 +54,7 @@
       <!-- чтобы открыть меню класс-модификатор menu-open -->
       <header class="body__header header">
         <!-- если главная, то атрибут aria-current и класс  -->
-        <a class="header__logo logo logo--header logo--current" href="/" aria-current="page">
+        <a class="header__logo logo logo--header" href="index.html">
           <!-- если главная, то атрибут aria-hidden -->
           <span class="visually-hidden" aria-hidden="true">
             Перейти на главную
@@ -68,7 +68,7 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <!-- для текущей страницы класс и атрибут current -->
-                <a class="navigation__link navigation__link--current" href="/" aria-current="page">
+                <a class="navigation__link" href="index.html">
                   <span class="navigation__link-text">
                     Главная
                   </span>
@@ -151,14 +151,14 @@
               *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена
             </p>
           </div>
-          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="#">
+          <a class="menu__button-price button button--menu-price button--with-arrow button--price" href="quiz.html">
             <span class="button__text">
               Узнать стоимость бассейна
             </span>
           </a>
         </div>
         <div class="header__button-wrap">
-          <a class="header__button-price button button--header-price button--blue-text" href="#">
+          <a class="header__button-price button button--header-price button--blue-text" href="quiz.html">
             <span class="button__text">
               Узнать стоимость
             </span>
@@ -187,182 +187,6 @@
           </h1>
           <div class="quiz__container">
             <form class="quiz__form wpcf7-form" action="https://echo.htmlacademy.ru" method="post">
-              <!-- <div class="quiz__slide">
-                <div class="quiz__slide-header">
-                  <h3 class="quiz__title">
-                    Какая услуга вас интересует?
-                  </h3>
-                </div>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--radio visually-hidden" type="radio" name="services" value="build" id="build" checked>
-                  <label class="quiz__label" for="build">
-                    <span class="quiz__label-text">
-                      Cтроительство бассейнов
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--radio visually-hidden" type="radio" name="services" value="service" id="service">
-                  <label class="quiz__label" for="service">
-                    <span class="quiz__label-text">
-                      Техническое обслуживание бассейна
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                </p>
-              </div>
-              <div class="quiz__slide">
-                <div class="quiz__slide-header">
-                  <h3 class="quiz__title">
-                    Бассейн планируется для личного использования или для коммерческих целей?
-                  </h3>
-                </div>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--radio visually-hidden" type="radio" name="commerce" value="commerce" id="commerce" checked>
-                  <label class="quiz__label" for="commerce">
-                    <span class="quiz__label-text">
-                      Коммерческий
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--radio visually-hidden" type="radio" name="commerce" value="no-commerce" id="no-commerce">
-                  <label class="quiz__label" for="no-commerce">
-                    <span class="quiz__label-text">
-                      Частный
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                </p>
-              </div>
-              <div class="quiz__slide">
-                <div class="quiz__slide-header">
-                  <h3 class="quiz__title">
-                    Какой вид бассейна вы рассматриваете?
-                  </h3>
-                  <span class="quiz__title-notice">
-                    Выберете несколько пунктов
-                  </span>
-                </div>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--checkbox visually-hidden" type="checkbox" name="type-pool" value="stationary" id="stationary" checked>
-                  <label class="quiz__label" for="stationary">
-                    <span class="quiz__label-text">
-                      Стационарный
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                  <button class="quiz__button-more-info button button--quiz-more-info" type="button">
-                    <span class="button__text">
-                      Что это такое
-                    </span>
-                  </button>
-                  <span class="quiz__info-by-input">
-                    Прочная чаша из железобетона, установленная в котловане. Отделка: плитка, мозаика, ПВХ-плёнка. Установка занимает 3–4 месяца. Требует регулярного ухода и периодического ремонта.
-                  </span>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--checkbox visually-hidden" type="checkbox" name="type-pool" value="frame" id="frame">
-                  <label class="quiz__label" for="frame">
-                    <span class="quiz__label-text">
-                      Каркасный
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                  <button class="quiz__button-more-info button button--quiz-more-info" type="button">
-                    <span class="button__text">
-                      Что это такое
-                    </span>
-                  </button>
-                  <span class="quiz__info-by-input quiz__info-by-input--open">
-                    Прочная чаша из железобетона, установленная в котловане. Отделка: плитка, мозаика, ПВХ-плёнка. Установка занимает 3–4 месяца. Требует регулярного ухода и периодического ремонта.
-                  </span>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--checkbox visually-hidden" type="checkbox" name="type-pool" value="composite" id="composite">
-                  <label class="quiz__label" for="composite">
-                    <span class="quiz__label-text">
-                      Композитный
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                  <button class="quiz__button-more-info button button--quiz-more-info" type="button">
-                    <span class="button__text">
-                      Что это такое
-                    </span>
-                  </button>
-                  <span class="quiz__info-by-input">
-                    Прочная чаша из железобетона, установленная в котловане. Отделка: плитка, мозаика, ПВХ-плёнка. Установка занимает 3–4 месяца. Требует регулярного ухода и периодического ремонта.
-                  </span>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--checkbox visually-hidden" type="checkbox" name="type-pool" value="other" id="other">
-                  <label class="quiz__label" for="other">
-                    <span class="quiz__label-text">
-                      Другой
-                    </span>
-                    <span class="quiz__label-icon"></span>
-                  </label>
-                  <input class="quiz__input quiz__input--text quiz__input--text-other" type="text" name="other-text" placeholder=" " id="other-text">
-                  <label class="quiz__label quiz__label--text-other" for="other-text">
-                    <span class="quiz__label-text">
-                      Ответ
-                    </span>
-                  </label>
-                </p>
-              </div>
-              <div class="quiz__slide">
-                <div class="quiz__slide-header">
-                  <h3 class="quiz__title">
-                    У каждого бассейна есть техническое помещение, как далеко от бассейна вы его видите?
-                  </h3>
-                </div>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--text" type="text" name="distance" placeholder=" " id="distance">
-                  <label class="quiz__label" for="distance">
-                    <span class="quiz__label-text">
-                      Ответ
-                    </span>
-                  </label>
-                </p>
-              </div>
-              <div class="quiz__slide quiz__slide--final">
-                <div class="quiz__slide-header">
-                  <h3 class="quiz__title">
-                    Получить консультацию
-                  </h3>
-                </div>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--text quiz__input--name" type="text" name="Имя" id="name" placeholder=" ">
-                  <label class="quiz__label" for="name">
-                    Имя
-                  </label>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--text quiz__input--phone" type="text" name="Телефон" id="phone" placeholder=" ">
-                  <label class="quiz__label" for="phone">
-                    Телефон
-                  </label>
-                </p>
-                <p class="quiz__wrap-input">
-                  <input class="quiz__input quiz__input--text quiz__input--email" type="text" name="Email" id="email" placeholder=" ">
-                  <label class="quiz__label" for="email">
-                    Почта
-                  </label>
-                </p>
-                <p class="quiz__wrap-input quiz__wrap-input--privacy">
-                  <input class="quiz__input quiz__input--privacy visually-hidden" type="checkbox" name="privacy" id="privacy">
-                  <label class="quiz__label quiz__label--privacy" for="privacy"><span class="quiz__label-icon"></span>
-                    Даю согласие на</label><a class="quiz__checkbox-link" href="#">обработку персональных данных</a>
-                </p>
-                <button class="quiz__button-submit button button--submit-quiz button--blue-text" type="button">
-                  <span class="button__text">
-                    Отправить
-                  </span>
-                </button>
-              </div> -->
             </form>
             <div class="quiz__buttons-wrap">
               <div class="quiz__button quiz__button--prev button button--green-text button--quiz-prev">
